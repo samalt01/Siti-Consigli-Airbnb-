@@ -74,28 +74,23 @@ Sito Airbnb Consigli/
 
 ## Dati precaricati (28 posti, come bozze)
 
-Voti da assegnare dall'admin. ✅ = Place ID presente, ⚠️ = da recuperare
-con la ricerca per nome.
+Tutti i posti, con Place ID e descrizioni IT/EN già scritte (tono
+propositivo ma sobrio), sono in **`data/seed-places.json`** — la fonte di
+verità per il precaricamento. Voti da assegnare dall'admin.
 
-**🍕 Cibo (14):** Trabocco Punta Fornace ✅, Giardino Mare ✅,
-Serafino La Playa ✅, Napulè ✅, Ferro e Fuoco ✅, Marechiaro ✅,
-Gelateria Ai Tre Scalini ✅, Fedipè ✅, L'Angolino ⚠️ *(cene eleganti)*,
-Il Parco dei Mulini ⚠️, Da Gino ⚠️ *(brodetto)*, Occhio alla Pecora ⚠️,
-Pasticceria Rossana Iezzi ⚠️, Il Giardino degli Aranci ⚠️
+- 27/28 posti hanno il Place ID verificato (i mancanti nel file sorgente
+  sono stati recuperati e confermati tramite indirizzo/sito/coordinate).
+- Unica eccezione: **Centro Commerciale Oasi** (`placeId: null`) — da
+  confermare dall'admin con la ricerca per nome.
+- "Eremo di San Celestino V" è stato identificato con l'host come
+  **Eremo di Sant'Onofrio al Morrone** (Sulmona).
+- "Centro commerciale Ortona" corrisponde su Maps a **Ortona Center**.
+- Le descrizioni EN dei posti precaricati sono già redatte a mano (niente
+  traduzione automatica per questi); la traduzione automatica resta per i
+  posti aggiunti in futuro dall'admin.
 
-**📍 Places to go (10):** Spiagge — Lido Mare Mè ✅, Punta Aderci ✅,
-Punta Acquabella ⚠️, Turchino ⚠️, Ripari di Giobbe ⚠️;
-Esperienze — Lago di Scanno ✅ *(a forma di cuore)*, Rocca Calascio ✅,
-Cinema Ciakcity ✅, Mammarosa Blockhaus ⚠️, Eremo di San Celestino V ⚠️
-
-**👶 Per i più piccoli (4):** Aqualand del Vasto ✅,
-Zoo Safari Rocca San Giovanni ✅, Parco Avventura Piana delle Mele ✅,
-Onda Blu ✅
-
-**🛍️ Shopping (5):** Polycenter ✅, Centro Comm. Ortona ✅, Megalò ✅,
-Centro Comm. Oasi ⚠️, Città Sant'Angelo Outlet Village ⚠️
-
-I Place ID già noti sono nel file sorgente `posti consigliati.rtf`.
+**🍕 Cibo (14)** · **📍 Places to go (10:** 5 spiagge + 5 esperienze **)**
+· **👶 Per i più piccoli (4)** · **🛍️ Shopping (5)**
 
 ## Modello dati (`places.json`, per posto)
 
