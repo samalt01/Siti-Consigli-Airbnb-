@@ -99,3 +99,112 @@ $('places-list').addEventListener('click', e => {
 
 window.adminHelpers = { collectForm, openEditor, refreshList, status, getKey,
   fetchDistance, fetchPhotoBlob, fetchPlaceDetails, parsePlaceDetails };
+
+// --- File System Access ---
+$('pick-dir').onclick = async () => {
+  try {
+    state.dirHandle = await window.showDirectoryPicker({ mode: 'readwrite' });
+    status(`Cartella scelta: ${state.dirHandle.name}. Ora "Carica places.json".`);
+  } catch { /* annullato */ }
+};
+
+async function readProjectFile(path) {
+  let dir = state.dirHandle;
+  const parts = path.split('/');
+  for (const part of parts.slice(0, -1)) dir = await dir.getDirectoryHandle(part);
+  const fh = await dir.getFileHandle(parts.at(-1));
+  return (await fh.getFile()).text();
+}
+
+async function writeProjectFile(path, content) {
+  let dir = state.dirHandle;
+  const parts = path.split('/');
+  for (const part of parts.slice(0, -1)) dir = await dir.getDirectoryHandle(part, { create: true });
+  const fh = await dir.getFileHandle(parts.at(-1), { create: true });
+  const w = await fh.createWritable();
+  await w.write(content);
+  await w.close();
+}
+
+$('load-places').onclick = async () => {
+  if (!state.dirHandle) return status('Prima scegli la cartella del progetto.');
+  try {
+    state.places = JSON.parse(await readProjectFile('data/places.json')).places;
+    state.config = JSON.parse(await readProjectFile('config.json'));
+    refreshList();
+    status(`Caricati ${state.places.length} posti.`);
+  } catch (e) { status(`Errore lettura: ${e.message}`); }
+};
+
+async function persist() {
+  await writeProjectFile('data/places.json', JSON.stringify({ places: state.places }, null, 2) + '\n');
+}
+
+// --- Completamento dati Google di un posto ---
+async function completePlace(p, rawDetails = null) {
+  const key = getKey();
+  const raw = rawDetails ?? await fetchPlaceDetails(p.placeId, key);
+  const d = parsePlaceDetails(raw);
+  Object.assign(p, { name: p.name || d.name, phone: d.phone, address: d.address,
+    coords: d.coords, hours: d.hours });
+  if (d.coords) p.distance = await fetchDistance(state.config.home, d.coords, key);
+  const photo = (raw.photos ?? [])[0];
+  if (photo && !p.photoUrl) {
+    const blob = await fetchPhotoBlob(photo.name, key);
+    await writeProjectFile(`img/places/${p.id}.jpg`, blob);
+    p.photoUrl = `img/places/${p.id}.jpg`;
+  }
+  p.draft = !(p.descriptionIt && p.coords);
+  return p;
+}
+
+// --- Pulsanti editor ---
+$('fetch-google').onclick = async () => {
+  if (!state.dirHandle || !state.config) return status('Scegli cartella e carica places.json prima.');
+  try {
+    const p = collectForm();
+    if (!p.placeId) return status('Serve un Place ID per recuperare i dati.');
+    status('Recupero dati Google…');
+    await completePlace(p);
+    state._editing = p;
+    status(`Fatto: ${p.phone ?? 'nessun telefono'} · ${p.distance ? p.distance.km + ' km / ' + p.distance.minutes + ' min' : 'distanza n/d'} · ${p.photoUrl ? 'foto ok' : 'nessuna foto'}. Ora salva.`);
+  } catch (e) { status(`Errore: ${e.message}`); }
+};
+
+$('save-place').onclick = async () => {
+  if (!state.dirHandle) return status('Scegli la cartella del progetto prima di salvare.');
+  const p = collectForm();
+  delete p._photos;
+  const i = state.places.findIndex(x => x.id === p.id);
+  if (i >= 0) state.places[i] = p; else state.places.push(p);
+  await persist();
+  refreshList();
+  $('edit-box').hidden = true;
+  status(`Salvato "${p.name}".`);
+};
+
+$('delete-place').onclick = async () => {
+  if (!confirm('Eliminare questo posto?')) return;
+  state.places = state.places.filter(x => x.id !== state.editingId);
+  await persist();
+  refreshList();
+  $('edit-box').hidden = true;
+  status('Eliminato.');
+};
+
+// --- Batch: completa tutte le bozze con placeId ---
+$('complete-all').onclick = async () => {
+  if (!state.dirHandle || !state.config) return status('Scegli cartella e carica places.json prima.');
+  const drafts = state.places.filter(p => p.draft && p.placeId);
+  let done = 0, errors = 0;
+  for (const p of drafts) {
+    try {
+      status(`(${done + errors + 1}/${drafts.length}) ${p.name}…`);
+      await completePlace(p);
+      await persist();
+      done++;
+    } catch (e) { errors++; console.error(p.id, e); }
+  }
+  refreshList();
+  status(`Completati ${done}/${drafts.length}${errors ? ` — ${errors} errori (vedi console)` : ''}.`);
+};
