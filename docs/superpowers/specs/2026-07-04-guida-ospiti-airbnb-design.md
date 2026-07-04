@@ -72,13 +72,13 @@ Sito Airbnb Consigli/
 - **Mobile-first:** layout a colonna singola, pulsanti touch-friendly,
   immagini lazy-load; su desktop griglia a più colonne.
 
-## Dati precaricati (28 posti, come bozze)
+## Dati precaricati (33 posti, come bozze)
 
 Tutti i posti, con Place ID e descrizioni IT/EN già scritte (tono
 propositivo ma sobrio), sono in **`data/seed-places.json`** — la fonte di
 verità per il precaricamento. Voti da assegnare dall'admin.
 
-- 27/28 posti hanno il Place ID verificato (i mancanti nel file sorgente
+- 32/33 posti hanno il Place ID verificato (i mancanti nel file sorgente
   sono stati recuperati e confermati tramite indirizzo/sito/coordinate).
 - Unica eccezione: **Centro Commerciale Oasi** (`placeId: null`) — da
   confermare dall'admin con la ricerca per nome.
