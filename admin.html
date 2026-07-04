@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin — Guida Ospiti</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body { padding: 16px 16px 40px; max-width: 760px; margin: 0 auto; }
+    fieldset { border: 1px solid #ccc; border-radius: 10px; margin-bottom: 16px; }
+    label { display: block; margin: 10px 0 4px; font-weight: 600; font-size: .85rem; }
+    input[type=text], input[type=password], textarea, select {
+      width: 100%; padding: 9px; border: 1px solid #bbb; border-radius: 8px; font: inherit; }
+    textarea { min-height: 90px; }
+    .row { display: flex; gap: 8px; align-items: end; }
+    .row > * { flex: 1; }
+    button { padding: 10px 14px; border: none; border-radius: 8px; background: var(--accent);
+      color: #fff; font-weight: 600; cursor: pointer; }
+    button.secondary { background: #666; }
+    .place-row { display: flex; justify-content: space-between; align-items: center;
+      padding: 8px; border-bottom: 1px solid #eee; gap: 8px; }
+    .place-row .draft-badge { color: #b00; font-size: .75rem; }
+    #status { position: fixed; bottom: 0; left: 0; right: 0; background: #1f2a2e;
+      color: #fff; padding: 10px 16px; font-size: .85rem; min-height: 20px; }
+    .rating-input { font-size: 1.6rem; }
+  </style>
+</head>
+<body>
+  <h1>Admin — Guida Ospiti</h1>
+
+  <fieldset>
+    <legend>Impostazioni</legend>
+    <label>Chiave API Google (Places + Routes)</label>
+    <div class="row">
+      <input type="password" id="api-key" placeholder="AIza…">
+      <button id="save-key" style="flex:0 0 auto">Salva chiave</button>
+    </div>
+    <div class="row" style="margin-top:10px">
+      <button id="pick-dir">📁 Scegli cartella del progetto</button>
+      <button id="load-places" class="secondary">↻ Carica places.json</button>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>Aggiungi / cerca posto</legend>
+    <div class="row">
+      <input type="text" id="search-q" placeholder="Cerca per nome (es. 'Da Gino Vallevò') o incolla un Place ID">
+      <button id="search-btn" style="flex:0 0 auto">Cerca</button>
+    </div>
+    <div id="search-results"></div>
+  </fieldset>
+
+  <fieldset id="edit-box" hidden>
+    <legend id="edit-title">Modifica posto</legend>
+    <label>Nome</label><input type="text" id="f-name">
+    <label>Place ID</label><input type="text" id="f-placeid">
+    <div class="row">
+      <div><label>Categoria</label>
+        <select id="f-category">
+          <option value="food">🍕 Cibo</option><option value="places">📍 Places to go</option>
+          <option value="kids">👶 Più piccoli</option><option value="shopping">🛍️ Shopping</option>
+        </select></div>
+      <div><label>Tag (solo Places)</label>
+        <select id="f-tag"><option value="">—</option>
+          <option value="beach">🏖️ Spiaggia</option><option value="experience">⛰️ Esperienza</option>
+        </select></div>
+    </div>
+    <label>Voto: <span id="f-rating-label">—</span></label>
+    <input type="range" id="f-rating" min="0" max="5" step="0.5" value="0" class="rating-input">
+    <label>Descrizione (italiano)</label>
+    <textarea id="f-desc-it"></textarea>
+    <div class="row"><button id="translate-btn" class="secondary">Traduci in EN →</button></div>
+    <label>Description (english)</label>
+    <textarea id="f-desc-en"></textarea>
+    <div class="row" style="margin-top:12px">
+      <button id="fetch-google">⬇️ Recupera dati Google (telefono, foto, distanza)</button>
+      <button id="save-place">💾 Salva posto</button>
+      <button id="delete-place" class="secondary">🗑 Elimina</button>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>Posti (<span id="count">0</span>) — <button id="complete-all" class="secondary">⚡️ Completa dati di tutte le bozze</button></legend>
+    <div id="places-list"></div>
+  </fieldset>
+
+  <div id="status">Pronto. 1) Salva la chiave · 2) Scegli la cartella del progetto · 3) Carica places.json</div>
+  <script type="module" src="js/admin.js"></script>
+</body>
+</html>
