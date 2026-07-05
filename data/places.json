@@ -1,28 +1,48 @@
 {
   "places": [
     {
-      "phone": null,
-      "address": null,
-      "coords": null,
-      "distance": null,
-      "photoUrl": null,
-      "hours": null,
+      "phone": "+39 345 306 4920",
+      "address": "Via Cristoforo Colombo, 66038 Marina di San Vito CH, Italia",
+      "coords": {
+        "lat": 42.305691499999995,
+        "lng": 14.451039499999998
+      },
+      "distance": {
+        "km": 1.6,
+        "minutes": 3
+      },
+      "photoUrl": "img/places/trabocco-punta-fornace.jpg",
+      "hours": {
+        "0": "lunedì: 13:00–14:00, 20:00–21:30",
+        "1": "martedì: 13:00–14:00, 20:00–21:30",
+        "2": "mercoledì: 13:00–14:00, 20:00–21:30",
+        "3": "giovedì: 13:00–14:00, 20:00–21:30",
+        "4": "venerdì: 13:00–14:00, 20:00–21:30",
+        "5": "sabato: 13:00–14:00, 20:00–21:30",
+        "6": "domenica: 13:00–14:00, 20:00–21:30"
+      },
       "id": "trabocco-punta-fornace",
       "placeId": "ChIJzfk3Oj0DMRMRF8ZezIFBDOQ",
       "category": "food",
       "tag": null,
       "name": "Trabocco Punta Fornace",
-      "rating": null,
+      "rating": 5,
       "descriptionIt": "Cena su un autentico trabocco, l'antica macchina da pesca sospesa sul mare. Menù fisso di pesce freschissimo e un'atmosfera che difficilmente dimenticherete. Prenotate con largo anticipo, soprattutto in estate.",
       "descriptionEn": "Dinner on an authentic trabocco, the traditional fishing platform suspended over the sea. Fixed menu of very fresh fish in a setting you won't easily forget. Book well in advance, especially in summer.",
-      "draft": true
+      "draft": false
     },
     {
-      "phone": null,
-      "address": null,
-      "coords": null,
-      "distance": null,
-      "photoUrl": null,
+      "phone": "+39 0872 61599",
+      "address": "SS16, 66035 Marina di San Vito CH, Italia",
+      "coords": {
+        "lat": 42.3094998,
+        "lng": 14.4412735
+      },
+      "distance": {
+        "km": 0.2,
+        "minutes": 0
+      },
+      "photoUrl": "img/places/giardino-mare.jpg",
       "hours": null,
       "id": "giardino-mare",
       "placeId": "ChIJjTeZWj0DMRMRFPIIHwwKmDo",
@@ -32,15 +52,29 @@
       "rating": null,
       "descriptionIt": "Cucina di mare a due passi dall'acqua, in un contesto rilassato. Una buona scelta per un pranzo o una cena senza formalità dopo una giornata di spiaggia.",
       "descriptionEn": "Seafood cooking just steps from the water, in a relaxed setting. A good choice for an easygoing lunch or dinner after a day at the beach.",
-      "draft": true
+      "draft": false
     },
     {
-      "phone": null,
-      "address": null,
-      "coords": null,
-      "distance": null,
-      "photoUrl": null,
-      "hours": null,
+      "phone": "+39 0872 61632",
+      "address": "Via Sangritana, 1, 66035 San Vito Chietino CH, Italia",
+      "coords": {
+        "lat": 42.3083774,
+        "lng": 14.4458225
+      },
+      "distance": {
+        "km": 1.3,
+        "minutes": 3
+      },
+      "photoUrl": "img/places/l-angolino.jpg",
+      "hours": {
+        "0": "lunedì: Chiuso",
+        "1": "martedì: 12:30–14:45, 19:30–21:45",
+        "2": "mercoledì: 12:30–14:30, 19:30–21:45",
+        "3": "giovedì: 12:30–14:30, 19:30–21:45",
+        "4": "venerdì: 12:30–14:30, 19:30–22:00",
+        "5": "sabato: 12:30–14:45, 19:30–22:00",
+        "6": "domenica: 12:30–14:45, 19:30–21:30"
+      },
       "id": "l-angolino",
       "placeId": "ChIJa2ByMkwCMRMRiutdJ9sWAVA",
       "category": "food",
@@ -49,15 +83,29 @@
       "rating": null,
       "descriptionIt": "Il nostro consiglio per una cena più elegante: cucina di pesce curata e servizio attento a San Vito Chietino. Ideale per un'occasione speciale; meglio prenotare.",
       "descriptionEn": "Our pick for a more refined dinner: carefully prepared seafood and attentive service in San Vito Chietino. Ideal for a special occasion; booking recommended.",
-      "draft": true
+      "draft": false
     },
     {
-      "phone": null,
-      "address": null,
-      "coords": null,
-      "distance": null,
-      "photoUrl": null,
-      "hours": null,
+      "phone": "+39 0871 941461",
+      "address": "Contrada Villa Baccile, 83, 66014 Crecchio CH, Italia",
+      "coords": {
+        "lat": 42.306486,
+        "lng": 14.334977400000001
+      },
+      "distance": {
+        "km": 13.7,
+        "minutes": 18
+      },
+      "photoUrl": "img/places/il-parco-dei-mulini.jpg",
+      "hours": {
+        "0": "lunedì: 19:30–01:00",
+        "1": "martedì: 19:30–01:00",
+        "2": "mercoledì: Chiuso",
+        "3": "giovedì: 19:30–01:00",
+        "4": "venerdì: 19:30–01:00",
+        "5": "sabato: 19:30–01:00",
+        "6": "domenica: 19:30–01:00"
+      },
       "id": "il-parco-dei-mulini",
       "placeId": "ChIJpQQKoKsBMRMRqsQ1vQU4ptQ",
       "category": "food",
@@ -66,15 +114,29 @@
       "rating": null,
       "descriptionIt": "Nell'entroterra di Crecchio, cucina di terra abruzzese in un ambiente immerso nel verde. Una buona alternativa al mare, anche per famiglie.",
       "descriptionEn": "Inland in Crecchio, Abruzzo countryside cooking surrounded by greenery. A good alternative to the seaside, families welcome.",
-      "draft": true
+      "draft": false
     },
     {
-      "phone": null,
-      "address": null,
-      "coords": null,
-      "distance": null,
-      "photoUrl": null,
-      "hours": null,
+      "phone": "+39 347 794 9612",
+      "address": "Contrada Vallevò, 73, 66020 Rocca San Giovanni CH, Italia",
+      "coords": {
+        "lat": 42.2861325,
+        "lng": 14.481740199999999
+      },
+      "distance": {
+        "km": 4.7,
+        "minutes": 6
+      },
+      "photoUrl": "img/places/da-gino.jpg",
+      "hours": {
+        "0": "lunedì: 12:30–15:30, 19:30–22:30",
+        "1": "martedì: 12:30–15:30, 19:30–22:30",
+        "2": "mercoledì: 12:30–15:30, 19:30–22:30",
+        "3": "giovedì: 12:30–15:30, 19:30–22:30",
+        "4": "venerdì: 12:30–15:30, 19:30–22:30",
+        "5": "sabato: 12:30–15:30, 19:30–22:30",
+        "6": "domenica: 12:30–15:30, 19:30–22:00"
+      },
       "id": "da-gino",
       "placeId": "ChIJ828-Li8dMRMRnu7Tf_iqx3M",
       "category": "food",
@@ -83,15 +145,29 @@
       "rating": null,
       "descriptionIt": "A Vallevò, sulla Costa dei Trabocchi, è un indirizzo storico per il brodetto di pesce alla vastese. Se volete assaggiare il piatto simbolo di questa costa, partite da qui.",
       "descriptionEn": "In Vallevò, on the Trabocchi Coast, a long-standing spot famous for brodetto, the local fish stew. If you want to try the signature dish of this coastline, start here.",
-      "draft": true
+      "draft": false
     },
     {
-      "phone": null,
-      "address": null,
-      "coords": null,
-      "distance": null,
-      "photoUrl": null,
-      "hours": null,
+      "phone": "+39 339 403 2162",
+      "address": "Via Santa Croce, 49A, 66034 Lanciano CH, Italia",
+      "coords": {
+        "lat": 42.2363733,
+        "lng": 14.398719100000001
+      },
+      "distance": {
+        "km": 11.4,
+        "minutes": 12
+      },
+      "photoUrl": "img/places/occhio-alla-pecora.jpg",
+      "hours": {
+        "0": "lunedì: Chiuso",
+        "1": "martedì: 19:20–00:00",
+        "2": "mercoledì: 19:20–00:00",
+        "3": "giovedì: 19:20–00:00",
+        "4": "venerdì: 19:20–00:00",
+        "5": "sabato: 19:20–00:00",
+        "6": "domenica: 19:20–00:00"
+      },
       "id": "occhio-alla-pecora",
       "placeId": "ChIJF71cWsb9MBMRx2_uPIkXzj0",
       "category": "food",
@@ -100,15 +176,29 @@
       "rating": null,
       "descriptionIt": "A Lanciano, il posto giusto per la tradizione abruzzese della carne: arrosticini e piatti a base di pecora fatti come si deve. Da provare almeno una volta durante il soggiorno.",
       "descriptionEn": "In Lanciano, the right place for Abruzzo's meat tradition: arrosticini (lamb skewers) and sheep-based dishes done properly. Worth trying at least once during your stay.",
-      "draft": true
+      "draft": false
     },
     {
-      "phone": null,
-      "address": null,
-      "coords": null,
-      "distance": null,
-      "photoUrl": null,
-      "hours": null,
+      "phone": "+39 375 589 4187",
+      "address": "Via Nazionale Adriatica, 6, 66038 San Vito Chietino CH, Italia",
+      "coords": {
+        "lat": 42.3083084,
+        "lng": 14.443436399999998
+      },
+      "distance": {
+        "km": 0.7,
+        "minutes": 1
+      },
+      "photoUrl": "img/places/serafino-la-playa.jpg",
+      "hours": {
+        "0": "lunedì: 19:00–23:00",
+        "1": "martedì: 19:00–23:00",
+        "2": "mercoledì: 12:00–15:00, 19:00–23:00",
+        "3": "giovedì: 12:00–15:00, 19:00–23:00",
+        "4": "venerdì: 12:00–15:00, 19:00–23:00",
+        "5": "sabato: 12:00–15:00, 19:00–23:00",
+        "6": "domenica: 12:00–15:00, 19:00–23:00"
+      },
       "id": "serafino-la-playa",
       "placeId": "ChIJlblrLgADMRMRsxV7VJeTeVo",
       "category": "food",
@@ -117,15 +207,29 @@
       "rating": null,
       "descriptionIt": "Ristorante sulla spiaggia: pesce fresco e piatti semplici da gustare direttamente in riva al mare. Perfetto per un pranzo dopo il bagno.",
       "descriptionEn": "Restaurant right on the beach: fresh fish and simple dishes to enjoy by the water. Perfect for lunch after a swim.",
-      "draft": true
+      "draft": false
     },
     {
-      "phone": null,
-      "address": null,
-      "coords": null,
-      "distance": null,
-      "photoUrl": null,
-      "hours": null,
+      "phone": "+39 0872 634966",
+      "address": "Contrada Villa Andreoli, 341/A, 66034 Lanciano CH, Italia",
+      "coords": {
+        "lat": 42.206569599999995,
+        "lng": 14.399860299999999
+      },
+      "distance": {
+        "km": 15.1,
+        "minutes": 17
+      },
+      "photoUrl": "img/places/napule.jpg",
+      "hours": {
+        "0": "lunedì: Chiuso",
+        "1": "martedì: 19:00–23:00",
+        "2": "mercoledì: 19:00–23:00",
+        "3": "giovedì: 19:00–23:00",
+        "4": "venerdì: 19:00–23:00",
+        "5": "sabato: 19:00–00:00",
+        "6": "domenica: 19:00–23:00"
+      },
       "id": "napule",
       "placeId": "ChIJAQyEIHX9MBMRPwcRIqqHUTI",
       "category": "food",
@@ -134,15 +238,29 @@
       "rating": null,
       "descriptionIt": "Pizza in stile napoletano, impasto ben lievitato e ingredienti di qualità. Una valida opzione per una serata informale.",
       "descriptionEn": "Neapolitan-style pizza with well-leavened dough and quality ingredients. A solid option for a casual evening.",
-      "draft": true
+      "draft": false
     },
     {
-      "phone": null,
-      "address": null,
-      "coords": null,
-      "distance": null,
-      "photoUrl": null,
-      "hours": null,
+      "phone": "+39 353 496 2081",
+      "address": "Via Feltrino, 25, 66038 Marina di San Vito CH, Italia",
+      "coords": {
+        "lat": 42.3082852,
+        "lng": 14.444801099999998
+      },
+      "distance": {
+        "km": 0.6,
+        "minutes": 1
+      },
+      "photoUrl": "img/places/ferro-e-fuoco.jpg",
+      "hours": {
+        "0": "lunedì: 12:30–15:00, 19:00–00:00",
+        "1": "martedì: Chiuso",
+        "2": "mercoledì: 12:30–15:00, 19:00–00:00",
+        "3": "giovedì: 12:30–15:00, 19:00–00:00",
+        "4": "venerdì: 12:30–15:00, 19:00–00:00",
+        "5": "sabato: 12:30–15:00, 19:00–00:00",
+        "6": "domenica: 12:30–15:00, 19:00–00:00"
+      },
       "id": "ferro-e-fuoco",
       "placeId": "ChIJ77TQfYoDMRMROjJcXyWZ73Q",
       "category": "food",
@@ -151,15 +269,29 @@
       "rating": null,
       "descriptionIt": "Per chi preferisce la carne: cotture alla brace e porzioni generose. Consigliato se dopo tanti giorni di pesce cercate un'alternativa.",
       "descriptionEn": "For meat lovers: grilled dishes and generous portions. Recommended if after days of seafood you're after something different.",
-      "draft": true
+      "draft": false
     },
     {
-      "phone": null,
-      "address": null,
-      "coords": null,
-      "distance": null,
-      "photoUrl": null,
-      "hours": null,
+      "phone": "+39 347 534 0762",
+      "address": "Via Frentana, 126, 66038 San Vito Chietino CH, Italia",
+      "coords": {
+        "lat": 42.305941399999995,
+        "lng": 14.4424365
+      },
+      "distance": {
+        "km": 0.8,
+        "minutes": 1
+      },
+      "photoUrl": "img/places/marechiaro.jpg",
+      "hours": {
+        "0": "lunedì: Chiuso",
+        "1": "martedì: 18:00–23:00",
+        "2": "mercoledì: 18:00–23:00",
+        "3": "giovedì: 18:00–23:00",
+        "4": "venerdì: 18:00–23:00",
+        "5": "sabato: 18:30–23:00",
+        "6": "domenica: 12:30–23:00"
+      },
       "id": "marechiaro",
       "placeId": "ChIJSaixBf8DMRMRbEuNK4DHHIQ",
       "category": "food",
@@ -168,15 +300,29 @@
       "rating": null,
       "descriptionIt": "Cucina di mare e pizza in un locale affacciato sulla costa. Buon rapporto qualità-prezzo e adatto anche alle famiglie.",
       "descriptionEn": "Seafood and pizza in a spot overlooking the coast. Good value for money and family-friendly too.",
-      "draft": true
+      "draft": false
     },
     {
-      "phone": null,
-      "address": null,
-      "coords": null,
-      "distance": null,
-      "photoUrl": null,
-      "hours": null,
+      "phone": "+39 0873 656615",
+      "address": "Via Ferdinando Magellano, 287, 66050 San Salvo Marina CH, Italia",
+      "coords": {
+        "lat": 42.0721889,
+        "lng": 14.7655066
+      },
+      "distance": {
+        "km": 50.5,
+        "minutes": 39
+      },
+      "photoUrl": "img/places/gelateria-ai-tre-scalini.jpg",
+      "hours": {
+        "0": "lunedì: 15:00–00:00",
+        "1": "martedì: 15:00–00:00",
+        "2": "mercoledì: 15:00–00:00",
+        "3": "giovedì: 15:00–00:00",
+        "4": "venerdì: 15:00–00:00",
+        "5": "sabato: 11:00–13:00, 14:00–01:00",
+        "6": "domenica: 11:00–00:00"
+      },
       "id": "gelateria-ai-tre-scalini",
       "placeId": "ChIJZXHqE0XbMBMRaulE30uv1h0",
       "category": "food",
@@ -185,15 +331,29 @@
       "rating": null,
       "descriptionIt": "Gelato artigianale fatto con cura: la tappa giusta per una pausa dolce o una passeggiata serale.",
       "descriptionEn": "Carefully made artisan gelato: the right stop for a sweet break or an evening stroll.",
-      "draft": true
+      "draft": false
     },
     {
-      "phone": null,
-      "address": null,
-      "coords": null,
-      "distance": null,
-      "photoUrl": null,
-      "hours": null,
+      "phone": "+39 0872 61097",
+      "address": "Via Nazionale Adriatica, 6, 66038 San Vito Chietino CH, Italia",
+      "coords": {
+        "lat": 42.3079185,
+        "lng": 14.445361499999999
+      },
+      "distance": {
+        "km": 0.6,
+        "minutes": 1
+      },
+      "photoUrl": "img/places/pasticceria-rossana-iezzi.jpg",
+      "hours": {
+        "0": "lunedì: 06:00–22:00",
+        "1": "martedì: 06:00–22:00",
+        "2": "mercoledì: 06:00–22:00",
+        "3": "giovedì: 06:00–22:00",
+        "4": "venerdì: 06:00–22:00",
+        "5": "sabato: 06:00–22:00",
+        "6": "domenica: 06:00–22:00"
+      },
       "id": "pasticceria-rossana-iezzi",
       "placeId": "ChIJqyReGRcDMRMR1WMoSWQNeIw",
       "category": "food",
@@ -202,15 +362,29 @@
       "rating": null,
       "descriptionIt": "Pasticceria a San Vito Chietino, ideale per la colazione o per portare a casa qualche dolce della tradizione. Provate le specialità abruzzesi.",
       "descriptionEn": "Pastry shop in San Vito Chietino, ideal for breakfast or to take home some traditional sweets. Try the Abruzzo specialties.",
-      "draft": true
+      "draft": false
     },
     {
-      "phone": null,
-      "address": null,
-      "coords": null,
-      "distance": null,
-      "photoUrl": null,
-      "hours": null,
+      "phone": "+39 0872 618069",
+      "address": "Via Lungomare di Gualdo, 37, 66038 Marina di San Vito CH, Italia",
+      "coords": {
+        "lat": 42.309418199999996,
+        "lng": 14.444779799999997
+      },
+      "distance": {
+        "km": 1.1,
+        "minutes": 3
+      },
+      "photoUrl": "img/places/fedipe.jpg",
+      "hours": {
+        "0": "lunedì: 12:00–02:00",
+        "1": "martedì: 12:00–02:00",
+        "2": "mercoledì: 12:00–02:00",
+        "3": "giovedì: 12:00–02:00",
+        "4": "venerdì: 12:00–02:00",
+        "5": "sabato: 12:00–02:00",
+        "6": "domenica: 12:00–02:00"
+      },
       "id": "fedipe",
       "placeId": "ChIJmcw-lRYDMRMRK3NMBSjZDzo",
       "category": "food",
@@ -219,15 +393,29 @@
       "rating": null,
       "descriptionIt": "Un indirizzo che consigliamo volentieri per una cena informale nella zona. Ambiente accogliente e proposte del territorio.",
       "descriptionEn": "A place we gladly recommend for a casual dinner in the area. Welcoming atmosphere and local dishes.",
-      "draft": true
+      "draft": false
     },
     {
-      "phone": null,
-      "address": null,
-      "coords": null,
-      "distance": null,
-      "photoUrl": null,
-      "hours": null,
+      "phone": "+39 334 388 1408",
+      "address": "Contrada Ripari Bardella 36, 66026 Ortona CH, Italia",
+      "coords": {
+        "lat": 42.3211248,
+        "lng": 14.427855399999999
+      },
+      "distance": {
+        "km": 1.7,
+        "minutes": 2
+      },
+      "photoUrl": "img/places/il-giardino-degli-aranci.jpg",
+      "hours": {
+        "0": "lunedì: Chiuso",
+        "1": "martedì: 20:00–22:30",
+        "2": "mercoledì: 12:30–15:00, 20:00–22:30",
+        "3": "giovedì: 12:30–15:30, 19:30–22:30",
+        "4": "venerdì: 12:30–15:30, 19:30–22:30",
+        "5": "sabato: 12:30–15:00, 20:00–22:30",
+        "6": "domenica: 12:30–15:30"
+      },
       "id": "il-giardino-degli-aranci",
       "placeId": "ChIJnWwAnQcDMRMRwMOJx4coBvg",
       "category": "food",
@@ -236,15 +424,29 @@
       "rating": null,
       "descriptionIt": "Ristorante immerso in un giardino di aranci in contrada Ripari Bardella, a Ortona. Piacevole soprattutto nelle sere d'estate, quando si cena all'aperto.",
       "descriptionEn": "Restaurant set in an orange grove in the Ripari Bardella area of Ortona. Especially pleasant on summer evenings, when dinner is served outdoors.",
-      "draft": true
+      "draft": false
     },
     {
-      "phone": null,
-      "address": null,
-      "coords": null,
-      "distance": null,
-      "photoUrl": null,
-      "hours": null,
+      "phone": "+39 379 279 2431",
+      "address": "Via Lungomare di Gualdo, 66038 Marina di San Vito CH, Italia",
+      "coords": {
+        "lat": 42.3113167,
+        "lng": 14.442453700000002
+      },
+      "distance": {
+        "km": 1.3,
+        "minutes": 3
+      },
+      "photoUrl": "img/places/lido-mare-me.jpg",
+      "hours": {
+        "0": "lunedì: Aperto 24 ore su 24",
+        "1": "martedì: Aperto 24 ore su 24",
+        "2": "mercoledì: Aperto 24 ore su 24",
+        "3": "giovedì: Aperto 24 ore su 24",
+        "4": "venerdì: Aperto 24 ore su 24",
+        "5": "sabato: Aperto 24 ore su 24",
+        "6": "domenica: Aperto 24 ore su 24"
+      },
       "id": "lido-mare-me",
       "placeId": "ChIJ5eEBafwDMRMRHVM3HnK9dY8",
       "category": "places",
@@ -253,15 +455,29 @@
       "rating": null,
       "descriptionIt": "Stabilimento attrezzato con ombrelloni, lettini e servizio bar: la scelta comoda per una giornata di mare senza pensieri.",
       "descriptionEn": "Fully equipped beach club with umbrellas, sunbeds and a bar: the easy choice for a carefree day by the sea.",
-      "draft": true
+      "draft": false
     },
     {
       "phone": null,
-      "address": null,
-      "coords": null,
-      "distance": null,
-      "photoUrl": null,
-      "hours": null,
+      "address": "66026 Ortona CH, Italia",
+      "coords": {
+        "lat": 42.3348149,
+        "lng": 14.425789100000001
+      },
+      "distance": {
+        "km": 4.4,
+        "minutes": 6
+      },
+      "photoUrl": "img/places/punta-acquabella.jpg",
+      "hours": {
+        "0": "lunedì: Aperto 24 ore su 24",
+        "1": "martedì: Aperto 24 ore su 24",
+        "2": "mercoledì: Aperto 24 ore su 24",
+        "3": "giovedì: Aperto 24 ore su 24",
+        "4": "venerdì: Aperto 24 ore su 24",
+        "5": "sabato: Aperto 24 ore su 24",
+        "6": "domenica: Aperto 24 ore su 24"
+      },
       "id": "punta-acquabella",
       "placeId": "ChIJ86NxgH8DMRMRoRF8WzyOVKI",
       "category": "places",
@@ -270,15 +486,29 @@
       "rating": null,
       "descriptionIt": "Caletta naturale di ghiaia e acqua limpida, raggiungibile con una breve discesa a piedi. Portate scarpette da scoglio e qualcosa da bere: non ci sono servizi, ed è proprio questo il suo bello.",
       "descriptionEn": "Natural pebble cove with clear water, reached via a short walk down. Bring water shoes and something to drink: there are no facilities, and that's exactly its charm.",
-      "draft": true
+      "draft": false
     },
     {
       "phone": null,
-      "address": null,
-      "coords": null,
-      "distance": null,
-      "photoUrl": null,
-      "hours": null,
+      "address": "San Vito Chietino CH - Spiaggia di Calata Turchino, Contrada Portelle, 66038 Marina di San Vito CH, Italia",
+      "coords": {
+        "lat": 42.3006077,
+        "lng": 14.4586774
+      },
+      "distance": {
+        "km": 2,
+        "minutes": 3
+      },
+      "photoUrl": "img/places/calata-turchino.jpg",
+      "hours": {
+        "0": "lunedì: Aperto 24 ore su 24",
+        "1": "martedì: Aperto 24 ore su 24",
+        "2": "mercoledì: Aperto 24 ore su 24",
+        "3": "giovedì: Aperto 24 ore su 24",
+        "4": "venerdì: Aperto 24 ore su 24",
+        "5": "sabato: Aperto 24 ore su 24",
+        "6": "domenica: Aperto 24 ore su 24"
+      },
       "id": "calata-turchino",
       "placeId": "ChIJCfyCuSUDMRMRDVunqT2-PSY",
       "category": "places",
@@ -287,15 +517,29 @@
       "rating": null,
       "descriptionIt": "La baia che ispirò D'Annunzio, con il trabocco Turchino a incorniciare il panorama. Ciottoli, mare trasparente e poca folla: una delle spiagge più suggestive della zona, a pochi minuti dall'appartamento.",
       "descriptionEn": "The bay that inspired the poet D'Annunzio, framed by the Turchino trabocco. Pebbles, transparent water and few crowds: one of the most striking beaches in the area, minutes from the apartment.",
-      "draft": true
+      "draft": false
     },
     {
-      "phone": null,
-      "address": null,
-      "coords": null,
-      "distance": null,
-      "photoUrl": null,
-      "hours": null,
+      "phone": "+39 345 337 8575",
+      "address": "Sentiero d'Accesso Punta Aderci, 66054 Vasto CH, Italia",
+      "coords": {
+        "lat": 42.180030099999996,
+        "lng": 14.687733699999999
+      },
+      "distance": {
+        "km": 37.5,
+        "minutes": 34
+      },
+      "photoUrl": "img/places/punta-aderci.jpg",
+      "hours": {
+        "0": "lunedì: Aperto 24 ore su 24",
+        "1": "martedì: Aperto 24 ore su 24",
+        "2": "mercoledì: Aperto 24 ore su 24",
+        "3": "giovedì: Aperto 24 ore su 24",
+        "4": "venerdì: Aperto 24 ore su 24",
+        "5": "sabato: Aperto 24 ore su 24",
+        "6": "domenica: Aperto 24 ore su 24"
+      },
       "id": "punta-aderci",
       "placeId": "ChIJh1Kh1UjeMBMRjmsMvXzfiIM",
       "category": "places",
@@ -304,15 +548,29 @@
       "rating": null,
       "descriptionIt": "Riserva naturale a Vasto con una delle spiagge più belle d'Abruzzo, Punta Penna. Vale la mezz'ora di viaggio: dune, sentieri panoramici e tramonti notevoli.",
       "descriptionEn": "Nature reserve in Vasto with one of Abruzzo's most beautiful beaches, Punta Penna. Worth the half-hour drive: dunes, scenic trails and remarkable sunsets.",
-      "draft": true
+      "draft": false
     },
     {
-      "phone": null,
-      "address": null,
-      "coords": null,
-      "distance": null,
-      "photoUrl": null,
-      "hours": null,
+      "phone": "+39 085 906 7098",
+      "address": "Ortona, 66026 Ortona CH, Italia",
+      "coords": {
+        "lat": 42.3713136,
+        "lng": 14.3921542
+      },
+      "distance": {
+        "km": 11.4,
+        "minutes": 16
+      },
+      "photoUrl": "img/places/ripari-di-giobbe.jpg",
+      "hours": {
+        "0": "lunedì: Aperto 24 ore su 24",
+        "1": "martedì: Aperto 24 ore su 24",
+        "2": "mercoledì: Aperto 24 ore su 24",
+        "3": "giovedì: Aperto 24 ore su 24",
+        "4": "venerdì: Aperto 24 ore su 24",
+        "5": "sabato: Aperto 24 ore su 24",
+        "6": "domenica: Aperto 24 ore su 24"
+      },
       "id": "ripari-di-giobbe",
       "placeId": "ChIJxziQFDAEMRMRZDCt5c7Lcpc",
       "category": "places",
@@ -321,15 +579,29 @@
       "rating": null,
       "descriptionIt": "Cala appartata a nord di Ortona: ghiaia chiara, fondale limpido e falesia alle spalle. Si raggiunge con una breve camminata, meglio arrivare presto in alta stagione.",
       "descriptionEn": "Secluded cove north of Ortona: light pebbles, clear water and a cliff backdrop. Reached via a short walk; best to arrive early in high season.",
-      "draft": true
+      "draft": false
     },
     {
       "phone": null,
-      "address": null,
-      "coords": null,
-      "distance": null,
-      "photoUrl": null,
-      "hours": null,
+      "address": "SR, 479, 67038 Scanno AQ, Italia",
+      "coords": {
+        "lat": 41.9179477,
+        "lng": 13.8710118
+      },
+      "distance": {
+        "km": 120.3,
+        "minutes": 91
+      },
+      "photoUrl": "img/places/lago-di-scanno.jpg",
+      "hours": {
+        "0": "lunedì: Aperto 24 ore su 24",
+        "1": "martedì: Aperto 24 ore su 24",
+        "2": "mercoledì: Aperto 24 ore su 24",
+        "3": "giovedì: Aperto 24 ore su 24",
+        "4": "venerdì: Aperto 24 ore su 24",
+        "5": "sabato: Aperto 24 ore su 24",
+        "6": "domenica: Aperto 24 ore su 24"
+      },
       "id": "lago-di-scanno",
       "placeId": "ChIJyd8B5QgTMBMRloFMNLgt0Ig",
       "category": "places",
@@ -338,15 +610,29 @@
       "rating": null,
       "descriptionIt": "Il famoso lago a forma di cuore, visibile dal sentiero che sale sopra la sponda. Abbinatelo a una passeggiata nel borgo di Scanno, tra i più belli d'Abruzzo. Gita di una giornata intera.",
       "descriptionEn": "The famous heart-shaped lake, best seen from the trail above the shore. Pair it with a walk through Scanno, one of Abruzzo's loveliest villages. Plan a full-day trip.",
-      "draft": true
+      "draft": false
     },
     {
-      "phone": null,
-      "address": null,
-      "coords": null,
-      "distance": null,
-      "photoUrl": null,
-      "hours": null,
+      "phone": "+39 0862 930132",
+      "address": "V. della Torre, 67020 Calascio AQ, Italia",
+      "coords": {
+        "lat": 42.3288744,
+        "lng": 13.6888616
+      },
+      "distance": {
+        "km": 106.9,
+        "minutes": 89
+      },
+      "photoUrl": "img/places/rocca-calascio.jpg",
+      "hours": {
+        "0": "lunedì: Aperto 24 ore su 24",
+        "1": "martedì: Aperto 24 ore su 24",
+        "2": "mercoledì: Aperto 24 ore su 24",
+        "3": "giovedì: Aperto 24 ore su 24",
+        "4": "venerdì: Aperto 24 ore su 24",
+        "5": "sabato: Aperto 24 ore su 24",
+        "6": "domenica: Aperto 24 ore su 24"
+      },
       "id": "rocca-calascio",
       "placeId": "ChIJGy8RNxktMBMRM1RGS62NBYE",
       "category": "places",
@@ -355,15 +641,29 @@
       "rating": null,
       "descriptionIt": "Castello a quasi 1.500 metri di quota, set di film come Ladyhawke. La camminata dal borgo è semplice e il panorama sul Gran Sasso ripaga ampiamente. Consigliato il tramonto.",
       "descriptionEn": "A castle at nearly 1,500 metres, film set of Ladyhawke among others. The walk up from the village is easy and the Gran Sasso views are well worth it. Sunset is the best time.",
-      "draft": true
+      "draft": false
     },
     {
-      "phone": null,
-      "address": null,
-      "coords": null,
-      "distance": null,
-      "photoUrl": null,
-      "hours": null,
+      "phone": "+39 0872 714455",
+      "address": "Centro Commerciale Polycenter, Contrada Santa Calcagna, 66020 Rocca San Giovanni CH, Italia",
+      "coords": {
+        "lat": 42.266351199999995,
+        "lng": 14.433871199999999
+      },
+      "distance": {
+        "km": 7.2,
+        "minutes": 11
+      },
+      "photoUrl": "img/places/cinema-ciakcity.jpg",
+      "hours": {
+        "0": "lunedì: 17:30–23:00",
+        "1": "martedì: 17:30–23:00",
+        "2": "mercoledì: 17:30–23:00",
+        "3": "giovedì: 17:30–23:00",
+        "4": "venerdì: 17:30–23:00",
+        "5": "sabato: 15:30–23:00",
+        "6": "domenica: 15:30–23:00"
+      },
       "id": "cinema-ciakcity",
       "placeId": "ChIJhbQCp4UCMRMR34iN1qvyRYg",
       "category": "places",
@@ -372,14 +672,20 @@
       "rating": null,
       "descriptionIt": "Multisala a Lanciano: un'opzione comoda per una serata diversa o per una giornata di pioggia.",
       "descriptionEn": "Multiplex cinema in Lanciano: a handy option for a different kind of evening or a rainy day. Films are usually shown dubbed in Italian.",
-      "draft": true
+      "draft": false
     },
     {
-      "phone": null,
-      "address": null,
-      "coords": null,
-      "distance": null,
-      "photoUrl": null,
+      "phone": "+39 0871 896143",
+      "address": "Via Majelletta, 35, 66010 Pretoro CH, Italia",
+      "coords": {
+        "lat": 42.172007699999995,
+        "lng": 14.1167959
+      },
+      "distance": {
+        "km": 80.2,
+        "minutes": 74
+      },
+      "photoUrl": "img/places/mammarosa-blockhaus.jpg",
       "hours": null,
       "id": "mammarosa-blockhaus",
       "placeId": "ChIJV3Ta3f1TMBMRpbKzlzRxVDc",
@@ -389,15 +695,29 @@
       "rating": null,
       "descriptionIt": "Rifugio-ristorante sulla strada per il Blockhaus, nel cuore della Majella. Cucina di montagna sostanziosa e aria fresca anche in piena estate: l'idea giusta per una giornata lontano dalla spiaggia.",
       "descriptionEn": "Mountain lodge and restaurant on the road to the Blockhaus, in the heart of the Majella massif. Hearty mountain cooking and cool air even at the height of summer: a good idea for a day away from the beach.",
-      "draft": true
+      "draft": false
     },
     {
-      "phone": null,
-      "address": null,
-      "coords": null,
-      "distance": null,
-      "photoUrl": null,
-      "hours": null,
+      "phone": "+39 349 847 4470",
+      "address": "Contrada Morrone, 67039 Sulmona AQ, Italia",
+      "coords": {
+        "lat": 42.0893478,
+        "lng": 13.9359446
+      },
+      "distance": {
+        "km": 96.8,
+        "minutes": 72
+      },
+      "photoUrl": "img/places/eremo-sant-onofrio.jpg",
+      "hours": {
+        "0": "lunedì: Chiuso",
+        "1": "martedì: Chiuso",
+        "2": "mercoledì: Chiuso",
+        "3": "giovedì: 09:00–13:00",
+        "4": "venerdì: 09:00–13:00",
+        "5": "sabato: 09:00–13:00, 15:00–19:00",
+        "6": "domenica: 09:00–13:00, 15:00–19:00"
+      },
       "id": "eremo-sant-onofrio",
       "placeId": "ChIJPUrRy0pHMBMRuEYfAui9PnQ",
       "category": "places",
@@ -406,15 +726,29 @@
       "rating": null,
       "descriptionIt": "L'eremo dove Pietro da Morrone ricevette la notizia dell'elezione a papa Celestino V, aggrappato alla parete del Morrone sopra Sulmona. Breve salita a piedi e vista ampia sulla valle Peligna.",
       "descriptionEn": "The hermitage where Pietro da Morrone learned he had been elected Pope Celestine V, clinging to the Morrone cliffside above Sulmona. A short uphill walk with sweeping views over the Peligna valley.",
-      "draft": true
+      "draft": false
     },
     {
-      "phone": null,
-      "address": null,
-      "coords": null,
-      "distance": null,
-      "photoUrl": null,
-      "hours": null,
+      "phone": "+39 0873 310130",
+      "address": "Località Incoronata, 66054 Vasto CH, Italia",
+      "coords": {
+        "lat": 42.150466,
+        "lng": 14.697129799999999
+      },
+      "distance": {
+        "km": 38.7,
+        "minutes": 33
+      },
+      "photoUrl": "img/places/aqualand-del-vasto.jpg",
+      "hours": {
+        "0": "lunedì: 10:00–18:00",
+        "1": "martedì: 10:00–18:00",
+        "2": "mercoledì: 10:00–18:00",
+        "3": "giovedì: 10:00–18:00",
+        "4": "venerdì: 10:00–18:00",
+        "5": "sabato: 10:00–18:00",
+        "6": "domenica: 10:00–18:00"
+      },
       "id": "aqualand-del-vasto",
       "placeId": "ChIJB6T-qXneMBMRnXRgyZYiXIc",
       "category": "kids",
@@ -423,15 +757,29 @@
       "rating": null,
       "descriptionIt": "Parco acquatico con scivoli e piscine per tutte le età. Una giornata assicurata di divertimento per i bambini; nei weekend d'agosto conviene arrivare all'apertura.",
       "descriptionEn": "Water park with slides and pools for all ages. A guaranteed fun day for kids; on August weekends it's best to arrive at opening time.",
-      "draft": true
+      "draft": false
     },
     {
-      "phone": null,
-      "address": null,
-      "coords": null,
-      "distance": null,
-      "photoUrl": null,
-      "hours": null,
+      "phone": "+39 329 066 4622",
+      "address": "Contrada Scalzino, 27, 66020 Rocca San Giovanni CH, Italia",
+      "coords": {
+        "lat": 42.274431,
+        "lng": 14.448435100000001
+      },
+      "distance": {
+        "km": 6.6,
+        "minutes": 10
+      },
+      "photoUrl": "img/places/zoo-d-abruzzo.jpg",
+      "hours": {
+        "0": "lunedì: 10:00–17:00",
+        "1": "martedì: Chiuso",
+        "2": "mercoledì: 10:00–17:00",
+        "3": "giovedì: 10:00–17:00",
+        "4": "venerdì: 10:00–17:00",
+        "5": "sabato: 10:00–17:00",
+        "6": "domenica: 10:00–17:00"
+      },
       "id": "zoo-d-abruzzo",
       "placeId": "ChIJobjkZ5UCMRMRwTRjnAwuyFQ",
       "category": "kids",
@@ -440,15 +788,29 @@
       "rating": null,
       "descriptionIt": "Parco faunistico a Rocca San Giovanni con animali da tutto il mondo. Percorso adatto anche ai più piccoli, mettete in conto mezza giornata.",
       "descriptionEn": "Wildlife park in Rocca San Giovanni with animals from around the world. The route suits even the youngest visitors; allow half a day.",
-      "draft": true
+      "draft": false
     },
     {
-      "phone": null,
-      "address": null,
-      "coords": null,
-      "distance": null,
-      "photoUrl": null,
-      "hours": null,
+      "phone": "+39 0871 335544",
+      "address": "Località Piana delle Mele, 66016 Guardiagrele CH, Italia",
+      "coords": {
+        "lat": 42.17754,
+        "lng": 14.170274
+      },
+      "distance": {
+        "km": 42.1,
+        "minutes": 55
+      },
+      "photoUrl": "img/places/parco-avventura-piana-delle-mele.jpg",
+      "hours": {
+        "0": "lunedì: 10:00–20:00",
+        "1": "martedì: 10:00–20:00",
+        "2": "mercoledì: 10:00–20:00",
+        "3": "giovedì: 10:00–20:00",
+        "4": "venerdì: 10:00–20:00",
+        "5": "sabato: 10:00–20:00",
+        "6": "domenica: 10:00–20:00"
+      },
       "id": "parco-avventura-piana-delle-mele",
       "placeId": "ChIJuao96h9RMBMREyN6zWXml7o",
       "category": "kids",
@@ -457,15 +819,29 @@
       "rating": null,
       "descriptionIt": "Percorsi sospesi tra gli alberi con livelli di difficoltà per ogni età, in un bosco fresco ai piedi della Majella. Ottima idea per una giornata attiva in famiglia.",
       "descriptionEn": "Treetop adventure courses with difficulty levels for every age, in a cool forest at the foot of the Majella. A great pick for an active family day.",
-      "draft": true
+      "draft": false
     },
     {
-      "phone": null,
-      "address": null,
-      "coords": null,
-      "distance": null,
-      "photoUrl": null,
-      "hours": null,
+      "phone": "+39 0861 7791",
+      "address": "Via dell' Industria, 14, 64018 Tortoreto TE, Italia",
+      "coords": {
+        "lat": 42.7813638,
+        "lng": 13.9382349
+      },
+      "distance": {
+        "km": 91.9,
+        "minutes": 75
+      },
+      "photoUrl": "img/places/onda-blu.jpg",
+      "hours": {
+        "0": "lunedì: 10:00–18:30",
+        "1": "martedì: 10:00–18:30",
+        "2": "mercoledì: 10:00–18:30",
+        "3": "giovedì: 10:00–18:30",
+        "4": "venerdì: 10:00–18:30",
+        "5": "sabato: 10:00–18:30",
+        "6": "domenica: 10:00–18:30"
+      },
       "id": "onda-blu",
       "placeId": "ChIJIc5EcKqSMRMRBbNnLWk8eZU",
       "category": "kids",
@@ -474,15 +850,29 @@
       "rating": null,
       "descriptionIt": "Parco acquatico con piscine e scivoli, alternativa più tranquilla per una giornata d'acqua con i bambini.",
       "descriptionEn": "Water park with pools and slides, a quieter alternative for a water-filled day with the kids.",
-      "draft": true
+      "draft": false
     },
     {
       "phone": null,
-      "address": null,
-      "coords": null,
-      "distance": null,
-      "photoUrl": null,
-      "hours": null,
+      "address": "Via per Treglio, 35, 66034 Lanciano CH, Italia",
+      "coords": {
+        "lat": 42.2667911,
+        "lng": 14.4348227
+      },
+      "distance": {
+        "km": 7.1,
+        "minutes": 10
+      },
+      "photoUrl": "img/places/polycenter.jpg",
+      "hours": {
+        "0": "lunedì: 08:45–20:30",
+        "1": "martedì: 08:45–20:30",
+        "2": "mercoledì: 08:45–20:30",
+        "3": "giovedì: 08:45–20:30",
+        "4": "venerdì: 08:45–20:30",
+        "5": "sabato: 08:45–20:30",
+        "6": "domenica: 09:00–20:00"
+      },
       "id": "polycenter",
       "placeId": "ChIJUT05CIUCMRMRsgBA8eiPRDU",
       "category": "shopping",
@@ -491,7 +881,7 @@
       "rating": null,
       "descriptionIt": "Centro commerciale a Lanciano con negozi, supermercato e servizi: pratico per acquisti di ogni genere senza allontanarsi troppo.",
       "descriptionEn": "Shopping centre in Lanciano with shops, a supermarket and services: practical for all kinds of purchases without going too far.",
-      "draft": true
+      "draft": false
     },
     {
       "phone": null,
@@ -512,12 +902,26 @@
       "draft": true
     },
     {
-      "phone": null,
-      "address": null,
-      "coords": null,
-      "distance": null,
-      "photoUrl": null,
-      "hours": null,
+      "phone": "+39 085 906 4772",
+      "address": "Contrada Santa Liberata, 66026 Ortona CH, Italia",
+      "coords": {
+        "lat": 42.344708,
+        "lng": 14.381599999999999
+      },
+      "distance": {
+        "km": 8.9,
+        "minutes": 12
+      },
+      "photoUrl": "img/places/ortona-center.jpg",
+      "hours": {
+        "0": "lunedì: 09:00–21:00",
+        "1": "martedì: 09:00–21:00",
+        "2": "mercoledì: 09:00–21:00",
+        "3": "giovedì: 09:00–21:00",
+        "4": "venerdì: 09:00–21:00",
+        "5": "sabato: 09:00–21:00",
+        "6": "domenica: 09:00–21:00"
+      },
       "id": "ortona-center",
       "placeId": "ChIJwUM4QwUEMRMRUMlYWMEGkmw",
       "category": "shopping",
@@ -526,15 +930,29 @@
       "rating": null,
       "descriptionIt": "Il centro commerciale di Ortona, in contrada Santa Liberata: supermercato e negozi a pochi minuti d'auto dall'appartamento.",
       "descriptionEn": "Ortona's shopping centre, in the Santa Liberata district: supermarket and shops just a few minutes' drive from the apartment.",
-      "draft": true
+      "draft": false
     },
     {
-      "phone": null,
-      "address": null,
-      "coords": null,
-      "distance": null,
-      "photoUrl": null,
-      "hours": null,
+      "phone": "+39 0871 540010",
+      "address": "Località Santa Filomena, 66100 Chieti CH, Italia",
+      "coords": {
+        "lat": 42.3437244,
+        "lng": 14.1269683
+      },
+      "distance": {
+        "km": 42.1,
+        "minutes": 36
+      },
+      "photoUrl": "img/places/megalo.jpg",
+      "hours": {
+        "0": "lunedì: 09:00–21:00",
+        "1": "martedì: 09:00–21:00",
+        "2": "mercoledì: 09:00–21:00",
+        "3": "giovedì: 09:00–21:00",
+        "4": "venerdì: 09:00–21:00",
+        "5": "sabato: 09:00–21:00",
+        "6": "domenica: 09:00–21:00"
+      },
       "id": "megalo",
       "placeId": "ChIJk3txdeauMRMRS3KFopr4mns",
       "category": "shopping",
@@ -543,15 +961,29 @@
       "rating": null,
       "descriptionIt": "Il grande centro commerciale di Chieti Scalo: oltre cento negozi, ristorazione e cinema. La meta giusta per una giornata dedicata allo shopping.",
       "descriptionEn": "The large shopping mall in Chieti Scalo: over a hundred stores, food court and cinema. The right destination for a full shopping day.",
-      "draft": true
+      "draft": false
     },
     {
-      "phone": null,
-      "address": null,
-      "coords": null,
-      "distance": null,
-      "photoUrl": null,
-      "hours": null,
+      "phone": "+39 085 950302",
+      "address": "Via Moscarola, 65013 Città Sant'Angelo PE, Italia",
+      "coords": {
+        "lat": 42.511870099999996,
+        "lng": 14.1201582
+      },
+      "distance": {
+        "km": 53,
+        "minutes": 44
+      },
+      "photoUrl": "img/places/citta-sant-angelo-village.jpg",
+      "hours": {
+        "0": "lunedì: 10:00–21:00",
+        "1": "martedì: 10:00–21:00",
+        "2": "mercoledì: 10:00–21:00",
+        "3": "giovedì: 10:00–21:00",
+        "4": "venerdì: 10:00–21:00",
+        "5": "sabato: 10:00–21:00",
+        "6": "domenica: 10:00–21:00"
+      },
       "id": "citta-sant-angelo-village",
       "placeId": "ChIJK5acM7ikMRMRVXVNfLgpX5Y",
       "category": "shopping",
@@ -560,7 +992,7 @@
       "rating": null,
       "descriptionIt": "Outlet a cielo aperto con marchi noti a prezzi scontati. A circa un'ora d'auto: da abbinare magari a una visita al borgo di Città Sant'Angelo.",
       "descriptionEn": "Open-air outlet village with well-known brands at discounted prices. About an hour's drive away: worth pairing with a visit to the old town of Città Sant'Angelo.",
-      "draft": true
+      "draft": false
     }
   ]
 }
