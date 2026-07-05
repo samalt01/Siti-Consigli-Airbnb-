@@ -56,3 +56,8 @@ export function waUrl(number, lang) {
 export function telUrl(phone) {
   return phone ? `tel:${phone.replace(/[^+\d]/g, '')}` : null;
 }
+
+export function photosOf(place) {
+  if (Array.isArray(place.photoUrls) && place.photoUrls.length) return place.photoUrls;
+  return place.photoUrl ? [place.photoUrl] : [];
+}

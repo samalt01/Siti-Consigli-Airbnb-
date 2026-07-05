@@ -75,3 +75,60 @@ export async function translateItToEn(text) {
   const out = data.responseData?.translatedText ?? '';
   return data.responseStatus === 200 ? out : '';
 }
+
+// --- Descrizioni con IA (Claude) ---
+
+const CATEGORY_LABEL = {
+  food: 'ristorante/locale dove mangiare', places: 'luogo da visitare',
+  kids: 'attrazione per bambini e famiglie', shopping: 'posto per lo shopping',
+};
+
+export function buildDescriptionPrompt(place) {
+  const parts = [
+    `Sei l'host di un appartamento vacanze sulla Costa dei Trabocchi (Abruzzo, vicino Ortona/San Vito Chietino).`,
+    `Scrivi la scheda di un posto che consigli ai tuoi ospiti.`,
+    ``,
+    `Posto: ${place.name}`,
+    `Tipo: ${CATEGORY_LABEL[place.category] ?? place.category}${place.tag === 'beach' ? ' (spiaggia)' : place.tag === 'experience' ? ' (esperienza/gita)' : ''}`,
+    place.address ? `Indirizzo: ${place.address}` : null,
+    place.distance ? `Distanza dall'appartamento: ${place.distance.km} km (${place.distance.minutes} min in auto)` : null,
+    ``,
+    `Tono: propositivo ma non eccessivamente entusiasta, da consiglio personale di un host che conosce la zona. 2-3 frasi, includi un suggerimento pratico se sensato (prenotare, orari, cosa portare). Niente superlativi gonfiati, niente emoji.`,
+  ];
+  return parts.filter(l => l !== null).join('\n');
+}
+
+export async function generateDescriptions(place, anthropicKey) {
+  const res = await fetch('https://api.anthropic.com/v1/messages', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'x-api-key': anthropicKey,
+      'anthropic-version': '2023-06-01',
+      'anthropic-dangerous-direct-browser-access': 'true',
+    },
+    body: JSON.stringify({
+      model: 'claude-opus-4-8',
+      max_tokens: 1024,
+      output_config: {
+        format: {
+          type: 'json_schema',
+          schema: {
+            type: 'object',
+            properties: {
+              descriptionIt: { type: 'string', description: 'Descrizione in italiano, 2-3 frasi' },
+              descriptionEn: { type: 'string', description: 'Stessa descrizione in inglese naturale (non tradotta parola per parola)' },
+            },
+            required: ['descriptionIt', 'descriptionEn'],
+            additionalProperties: false,
+          },
+        },
+      },
+      messages: [{ role: 'user', content: buildDescriptionPrompt(place) }],
+    }),
+  });
+  const data = await jsonOrThrow(res);
+  if (data.stop_reason === 'refusal') throw new Error('Richiesta rifiutata dal modello');
+  const text = data.content?.find(b => b.type === 'text')?.text ?? '';
+  return JSON.parse(text);
+}

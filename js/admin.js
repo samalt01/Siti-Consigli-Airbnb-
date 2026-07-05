@@ -1,5 +1,5 @@
 import { searchPlaces, fetchPlaceDetails, parsePlaceDetails, fetchDistance,
-  fetchPhotoBlob, translateItToEn, slugify } from './admin-api.mjs';
+  fetchPhotoBlob, translateItToEn, slugify, generateDescriptions } from './admin-api.mjs';
 
 const $ = id => document.getElementById(id);
 const status = msg => { $('status').textContent = msg; };
@@ -11,6 +11,13 @@ const getKey = () => localStorage.getItem('gmapsApiKey') ?? '';
 // --- Impostazioni ---
 $('api-key').value = getKey();
 $('save-key').onclick = () => { localStorage.setItem('gmapsApiKey', $('api-key').value.trim()); status('Chiave salvata nel browser.'); };
+
+const getAnthropicKey = () => localStorage.getItem('anthropicApiKey') ?? '';
+$('anthropic-key').value = getAnthropicKey();
+$('save-anthropic-key').onclick = () => {
+  localStorage.setItem('anthropicApiKey', $('anthropic-key').value.trim());
+  status('Chiave Anthropic salvata nel browser.');
+};
 
 // --- Ricerca ---
 $('search-btn').onclick = async () => {
@@ -66,6 +73,20 @@ function openEditor(place) {
 $('f-rating').oninput = () => {
   const v = parseFloat($('f-rating').value);
   $('f-rating-label').textContent = v ? `${v} ⭐` : '—';
+};
+
+$('ai-desc-btn').onclick = async () => {
+  const aKey = getAnthropicKey();
+  if (!aKey) return status('Salva prima la chiave API Anthropic nelle Impostazioni.');
+  try {
+    const p = collectForm();
+    if (!p.name) return status('Serve almeno il nome del posto.');
+    status('✨ L’IA sta scrivendo la descrizione…');
+    const d = await generateDescriptions(p, aKey);
+    $('f-desc-it').value = d.descriptionIt;
+    $('f-desc-en').value = d.descriptionEn;
+    status('Descrizioni generate (IT + EN): controlla e correggi se serve, poi salva.');
+  } catch (e) { status(`Errore IA: ${e.message}`); }
 };
 
 $('translate-btn').onclick = async () => {
@@ -140,6 +161,25 @@ async function persist() {
   await writeProjectFile('data/places.json', JSON.stringify({ places: state.places }, null, 2) + '\n');
 }
 
+// --- Foto: scarica fino a 5 immagini del posto (salta quelle già presenti) ---
+const MAX_PHOTOS = 5;
+async function syncPhotos(p, raw) {
+  const key = getKey();
+  const photos = (raw.photos ?? []).slice(0, MAX_PHOTOS);
+  const urls = [];
+  for (let i = 0; i < photos.length; i++) {
+    const path = `img/places/${p.id}${i === 0 ? '' : '-' + (i + 1)}.jpg`;
+    const already = (p.photoUrls ?? []).includes(path) || (i === 0 && p.photoUrl === path);
+    if (!already) {
+      const blob = await fetchPhotoBlob(photos[i].name, key);
+      await writeProjectFile(path, blob);
+    }
+    urls.push(path);
+  }
+  if (urls.length) { p.photoUrls = urls; p.photoUrl = urls[0]; }
+  return urls.length;
+}
+
 // --- Completamento dati Google di un posto ---
 async function completePlace(p, rawDetails = null) {
   const key = getKey();
@@ -148,12 +188,7 @@ async function completePlace(p, rawDetails = null) {
   Object.assign(p, { name: p.name || d.name, phone: d.phone, address: d.address,
     coords: d.coords, hours: d.hours });
   if (d.coords) p.distance = await fetchDistance(state.config.home, d.coords, key);
-  const photo = (raw.photos ?? [])[0];
-  if (photo && !p.photoUrl) {
-    const blob = await fetchPhotoBlob(photo.name, key);
-    await writeProjectFile(`img/places/${p.id}.jpg`, blob);
-    p.photoUrl = `img/places/${p.id}.jpg`;
-  }
+  await syncPhotos(p, raw);
   p.draft = !(p.descriptionIt && p.coords);
   return p;
 }
@@ -207,4 +242,23 @@ $('complete-all').onclick = async () => {
   }
   refreshList();
   status(`Completati ${done}/${drafts.length}${errors ? ` — ${errors} errori (vedi console)` : ''}.`);
+};
+
+// --- Batch: scarica più foto (fino a 5) per tutti i posti con placeId ---
+$('more-photos').onclick = async () => {
+  if (!state.dirHandle || !state.config) return status('Scegli cartella e carica places.json prima.');
+  const targets = state.places.filter(p => p.placeId);
+  let done = 0, errors = 0;
+  for (const p of targets) {
+    try {
+      status(`🖼 (${done + errors + 1}/${targets.length}) ${p.name}…`);
+      const raw = await fetchPlaceDetails(p.placeId, getKey());
+      const n = await syncPhotos(p, raw);
+      await persist();
+      done++;
+      console.log(p.id, `${n} foto`);
+    } catch (e) { errors++; console.error(p.id, e); }
+  }
+  refreshList();
+  status(`Foto aggiornate per ${done}/${targets.length} posti${errors ? ` — ${errors} errori (vedi console)` : ''}. Ricorda di pubblicare.`);
 };

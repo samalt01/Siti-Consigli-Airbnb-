@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { parsePlaceDetails, parseRoute, slugify } from '../js/admin-api.mjs';
+import { parsePlaceDetails, parseRoute, slugify, buildDescriptionPrompt } from '../js/admin-api.mjs';
 
 test('parsePlaceDetails mappa i campi della Places API (New)', () => {
   const api = {
@@ -32,4 +32,15 @@ test('parseRoute converte metri e durata', () => {
 test('slugify', () => {
   assert.equal(slugify("L'Angolino di Flavia"), 'l-angolino-di-flavia');
   assert.equal(slugify('Città Sant’Angelo!'), 'citta-sant-angelo');
+});
+
+test('buildDescriptionPrompt include nome, tipo e tono', () => {
+  const prompt = buildDescriptionPrompt({
+    name: 'Da Gino', category: 'food', tag: null,
+    address: 'Contrada Vallevò 73', distance: { km: 8.1, minutes: 12 },
+  });
+  assert.match(prompt, /Da Gino/);
+  assert.match(prompt, /ristorante/);
+  assert.match(prompt, /8.1 km/);
+  assert.match(prompt, /propositivo ma non eccessivamente entusiasta/);
 });

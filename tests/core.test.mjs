@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { visiblePlaces, formatDistance, starsHtml, descriptionFor, mapsUrl, waUrl, telUrl } from '../js/core.mjs';
+import { visiblePlaces, formatDistance, starsHtml, descriptionFor, mapsUrl, waUrl, telUrl, photosOf } from '../js/core.mjs';
 
 const P = (over) => ({ id: 'x', placeId: 'PID', category: 'food', tag: null, name: 'X',
   rating: null, descriptionIt: 'it', descriptionEn: 'en', draft: false,
@@ -60,4 +60,11 @@ test('waUrl e telUrl', () => {
   assert.match(waUrl('393665316952', 'it'), /^https:\/\/wa\.me\/393665316952\?text=/);
   assert.equal(telUrl('+39 085 123 456'), 'tel:+39085123456');
   assert.equal(telUrl(null), null);
+});
+
+test('photosOf: array photoUrls, fallback photoUrl singola, vuoto', () => {
+  assert.deepEqual(photosOf(P({ photoUrls: ['a.jpg', 'b.jpg'], photoUrl: 'a.jpg' })), ['a.jpg', 'b.jpg']);
+  assert.deepEqual(photosOf(P({ photoUrl: 'solo.jpg' })), ['solo.jpg']);
+  assert.deepEqual(photosOf(P({})), []);
+  assert.deepEqual(photosOf(P({ photoUrls: [] , photoUrl: 'x.jpg' })), ['x.jpg']);
 });

@@ -35,6 +35,11 @@
       <input type="password" id="api-key" placeholder="AIza…">
       <button id="save-key" style="flex:0 0 auto">Salva chiave</button>
     </div>
+    <label>Chiave API Anthropic (descrizioni con IA)</label>
+    <div class="row">
+      <input type="password" id="anthropic-key" placeholder="sk-ant-…">
+      <button id="save-anthropic-key" style="flex:0 0 auto">Salva chiave</button>
+    </div>
     <div class="row" style="margin-top:10px">
       <button id="pick-dir">📁 Scegli cartella del progetto</button>
       <button id="load-places" class="secondary">↻ Carica places.json</button>
@@ -69,7 +74,10 @@
     <input type="range" id="f-rating" min="0" max="5" step="0.5" value="0" class="rating-input">
     <label>Descrizione (italiano)</label>
     <textarea id="f-desc-it"></textarea>
-    <div class="row"><button id="translate-btn" class="secondary">Traduci in EN →</button></div>
+    <div class="row">
+      <button id="ai-desc-btn">✨ Scrivi con IA (IT + EN)</button>
+      <button id="translate-btn" class="secondary">Traduci in EN →</button>
+    </div>
     <label>Description (english)</label>
     <textarea id="f-desc-en"></textarea>
     <div class="row" style="margin-top:12px">
@@ -80,7 +88,10 @@
   </fieldset>
 
   <fieldset>
-    <legend>Posti (<span id="count">0</span>) — <button id="complete-all" class="secondary">⚡️ Completa dati di tutte le bozze</button></legend>
+    <legend>Posti (<span id="count">0</span>) —
+      <button id="complete-all" class="secondary">⚡️ Completa dati di tutte le bozze</button>
+      <button id="more-photos" class="secondary">🖼 Scarica più foto (tutti)</button>
+    </legend>
     <div id="places-list"></div>
   </fieldset>
 

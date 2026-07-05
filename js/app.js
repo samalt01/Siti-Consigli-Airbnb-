@@ -1,4 +1,4 @@
-import { visiblePlaces, formatDistance, starsHtml, descriptionFor, mapsUrl, waUrl, telUrl } from './core.mjs';
+import { visiblePlaces, formatDistance, starsHtml, descriptionFor, mapsUrl, waUrl, telUrl, photosOf } from './core.mjs';
 import { t, getLang, setLang } from './i18n.mjs';
 
 const CATEGORIES = [
@@ -14,8 +14,8 @@ const $ = id => document.getElementById(id);
 
 async function loadData() {
   const [cfg, data] = await Promise.all([
-    fetch('config.json').then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }),
-    fetch('data/places.json').then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }),
+    fetch('config.json', { cache: 'no-store' }).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }),
+    fetch('data/places.json', { cache: 'no-store' }).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }),
   ]);
   state.config = cfg;
   state.places = data.places;
@@ -85,6 +85,32 @@ function closeDetail() {
   d.innerHTML = '';
 }
 
+// Foto della scheda: singola o carosello swipabile con pallini.
+function heroHtml(place) {
+  const photos = photosOf(place);
+  if (!photos.length) return '<div class="hero"></div>';
+  if (photos.length === 1) return `<img class="hero" src="${photos[0]}" alt="">`;
+  return `
+    <div class="carousel">
+      <div class="carousel-track">
+        ${photos.map(u => `<img src="${u}" alt="" loading="lazy">`).join('')}
+      </div>
+      <div class="carousel-dots">
+        ${photos.map((_, i) => `<span class="dot${i === 0 ? ' active' : ''}"></span>`).join('')}
+      </div>
+    </div>`;
+}
+
+function bindCarousel(root) {
+  const track = root.querySelector('.carousel-track');
+  if (!track) return;
+  const dots = [...root.querySelectorAll('.carousel-dots .dot')];
+  track.addEventListener('scroll', () => {
+    const i = Math.round(track.scrollLeft / track.clientWidth);
+    dots.forEach((d, j) => d.classList.toggle('active', j === i));
+  }, { passive: true });
+}
+
 function renderDetail(place) {
   const d = $('detail');
   const call = telUrl(place.phone);
@@ -92,7 +118,7 @@ function renderDetail(place) {
     <div class="sheet" role="dialog" aria-modal="true" aria-label="${place.name}">
       <div class="sheet-handle"></div>
       <button class="back-btn" id="back" aria-label="${t('back', state.lang)}">✕</button>
-      ${place.photoUrl ? `<img class="hero" src="${place.photoUrl}" alt="">` : `<div class="hero"></div>`}
+      ${heroHtml(place)}
       <div class="content">
         <h2>${place.name}</h2>
         ${starsHtml(place.rating)}
@@ -109,6 +135,7 @@ function renderDetail(place) {
     </div>`;
   d.hidden = false;
   d.querySelector('#back').onclick = closeDetail;
+  bindCarousel(d);
   // tocco sullo sfondo (fuori dalla scheda) → chiude
   d.onclick = e => { if (e.target === d) closeDetail(); };
 }
