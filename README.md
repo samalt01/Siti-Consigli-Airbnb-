@@ -1,4 +1,4 @@
-# La Guida di Samuel — Guida per gli ospiti
+# La Guida di Samuele — Guida per gli ospiti
 
 Sito statico bilingue (IT/EN) con i posti consigliati agli ospiti, gestito
 tramite pannello admin locale. Spec: `docs/superpowers/specs/`.
