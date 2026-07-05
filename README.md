@@ -5,8 +5,9 @@ tramite pannello admin locale. Spec: `docs/superpowers/specs/`.
 
 ## Uso quotidiano (host)
 
-1. Apri `admin.html` in **Chrome** con un server locale:
-   `python3 -m http.server 8000` → http://localhost:8000/admin.html
+1. Doppio click su `apri-admin.command` (avvia il server locale e apre
+   l'admin in Chrome). ⚠️ Non aprire `admin.html` con doppio click: da
+   `file://` i pulsanti non funzionano.
 2. La prima volta: incolla la chiave API e salva; scegli la cartella del
    progetto; carica `places.json`.
 3. Aggiungi/modifica posti (ricerca per nome o Place ID, voto, descrizione).
