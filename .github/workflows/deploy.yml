@@ -19,7 +19,8 @@ jobs:
           mkdir _site
           rsync -a --exclude admin.html --exclude 'js/admin*' --exclude docs \
             --exclude scripts --exclude tests --exclude .github \
-            --exclude '*.rtf' --exclude _site --exclude .superpowers --exclude .claude ./ _site/
+            --exclude '*.rtf' --exclude '*.command' --exclude _site \
+            --exclude .superpowers --exclude .claude ./ _site/
       - uses: actions/upload-pages-artifact@v3
         with: { path: _site }
       - id: deployment
