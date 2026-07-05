@@ -50,8 +50,8 @@ function renderTabs() {
 function renderCards() {
   const list = visiblePlaces(state.places,
     { category: state.category, tag: state.tag, includeDrafts: state.preview });
-  $('cards').innerHTML = list.length ? list.map(p => `
-    <article class="card" data-id="${p.id}">
+  $('cards').innerHTML = list.length ? list.map((p, i) => `
+    <article class="card" data-id="${p.id}" style="--i:${i}">
       ${p.photoUrl ? `<img src="${p.photoUrl}" alt="" loading="lazy">` : `<div class="noimg">📷</div>`}
       <div class="card-body">
         <h3>${p.name}</h3>
@@ -62,28 +62,55 @@ function renderCards() {
     : `<p class="msg">${t('emptyCategory', state.lang)}</p>`;
 }
 
+// Orari: riga di oggi in evidenza, settimana ripiegata, link a Google per il dato fresco.
+function hoursHtml(place) {
+  if (!place.hours) return '';
+  const week = Object.values(place.hours);
+  const todayIdx = (new Date().getDay() + 6) % 7; // hours[0] = lunedì
+  const today = week[todayIdx] ?? '';
+  const gUrl = place.placeId
+    ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(place.name)}&query_place_id=${place.placeId}`
+    : null;
+  return `
+    <p class="info hours-today">🕐 ${t('today', state.lang)}: ${today.replace(/^[^:]+:\s*/, '')}</p>
+    <details>
+      <summary>${t('hours', state.lang)}</summary>
+      <p class="info">${week.join('\n')}${gUrl ? `\n<a href="${gUrl}" target="_blank" rel="noopener">${t('checkOnGoogle', state.lang)} ↗</a>` : ''}</p>
+    </details>`;
+}
+
+function closeDetail() {
+  const d = $('detail');
+  d.hidden = true;
+  d.innerHTML = '';
+}
+
 function renderDetail(place) {
   const d = $('detail');
   const call = telUrl(place.phone);
-  const hours = place.hours ? Object.values(place.hours).join('\n') : '';
   d.innerHTML = `
-    <button class="back-btn" id="back">← ${t('back', state.lang)}</button>
-    ${place.photoUrl ? `<img class="hero" src="${place.photoUrl}" alt="">` : `<div class="hero"></div>`}
-    <div class="content">
-      <h2>${place.name}</h2>
-      ${starsHtml(place.rating)}
-      <p class="info">${formatDistance(place.distance, state.lang)}</p>
-      <p class="desc">${descriptionFor(place, state.lang)}</p>
-      ${place.address ? `<p class="info"><strong>${t('address', state.lang)}:</strong> ${place.address}</p>` : ''}
-      ${hours ? `<p class="info"><strong>${t('hours', state.lang)}:</strong>\n${hours}</p>` : ''}
-      <div class="actions">
-        ${call ? `<a class="btn btn-call" href="${call}">📞 ${t('call', state.lang)}</a>` : ''}
-        <a class="btn btn-maps" href="${mapsUrl(place, state.config.home)}" target="_blank" rel="noopener">🗺️ ${t('directions', state.lang)}</a>
-        <a class="btn btn-wa" href="${waUrl(state.config.whatsapp, state.lang)}" target="_blank" rel="noopener">💬 ${t('contactHost', state.lang)}</a>
+    <div class="sheet" role="dialog" aria-modal="true" aria-label="${place.name}">
+      <div class="sheet-handle"></div>
+      <button class="back-btn" id="back" aria-label="${t('back', state.lang)}">✕</button>
+      ${place.photoUrl ? `<img class="hero" src="${place.photoUrl}" alt="">` : `<div class="hero"></div>`}
+      <div class="content">
+        <h2>${place.name}</h2>
+        ${starsHtml(place.rating)}
+        <p class="info">${formatDistance(place.distance, state.lang)}</p>
+        <p class="desc">${descriptionFor(place, state.lang)}</p>
+        ${place.address ? `<p class="info">📍 ${place.address}</p>` : ''}
+        ${hoursHtml(place)}
+        <div class="actions">
+          ${call ? `<a class="btn btn-call" href="${call}">📞 ${t('call', state.lang)}</a>` : ''}
+          <a class="btn btn-maps" href="${mapsUrl(place, state.config.home)}" target="_blank" rel="noopener">🗺️ ${t('directions', state.lang)}</a>
+          <a class="btn btn-wa" href="${waUrl(state.config.whatsapp, state.lang)}" target="_blank" rel="noopener">💬 ${t('contactHost', state.lang)}</a>
+        </div>
       </div>
     </div>`;
   d.hidden = false;
-  d.querySelector('#back').onclick = () => { d.hidden = true; d.innerHTML = ''; };
+  d.querySelector('#back').onclick = closeDetail;
+  // tocco sullo sfondo (fuori dalla scheda) → chiude
+  d.onclick = e => { if (e.target === d) closeDetail(); };
 }
 
 function renderAll() { renderHeader(); renderTabs(); renderCards(); }
@@ -103,6 +130,9 @@ function bindEvents() {
   });
   $('lang-it').onclick = () => { state.lang = 'it'; setLang('it'); renderAll(); };
   $('lang-en').onclick = () => { state.lang = 'en'; setLang('en'); renderAll(); };
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && !$('detail').hidden) closeDetail();
+  });
 }
 
 loadData().then(() => { bindEvents(); renderAll(); })
