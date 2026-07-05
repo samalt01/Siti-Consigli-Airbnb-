@@ -18,7 +18,7 @@ http://localhost:8000/ (aggiungi `?preview=1` per vedere anche le bozze).
 
 ## Test
 
-`node --test tests/`
+`node --test tests/*.test.mjs`
 
 ## Prima configurazione (una tantum)
 
