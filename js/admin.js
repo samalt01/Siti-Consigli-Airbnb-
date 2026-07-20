@@ -12,11 +12,11 @@ const getKey = () => localStorage.getItem('gmapsApiKey') ?? '';
 $('api-key').value = getKey();
 $('save-key').onclick = () => { localStorage.setItem('gmapsApiKey', $('api-key').value.trim()); status('Chiave salvata nel browser.'); };
 
-const getAnthropicKey = () => localStorage.getItem('anthropicApiKey') ?? '';
-$('anthropic-key').value = getAnthropicKey();
-$('save-anthropic-key').onclick = () => {
-  localStorage.setItem('anthropicApiKey', $('anthropic-key').value.trim());
-  status('Chiave Anthropic salvata nel browser.');
+const getGeminiKey = () => localStorage.getItem('geminiApiKey') ?? '';
+$('gemini-key').value = getGeminiKey();
+$('save-gemini-key').onclick = () => {
+  localStorage.setItem('geminiApiKey', $('gemini-key').value.trim());
+  status('Chiave Gemini salvata nel browser.');
 };
 
 // --- Ricerca ---
@@ -76,8 +76,8 @@ $('f-rating').oninput = () => {
 };
 
 $('ai-desc-btn').onclick = async () => {
-  const aKey = getAnthropicKey();
-  if (!aKey) return status('Salva prima la chiave API Anthropic nelle Impostazioni.');
+  const aKey = getGeminiKey();
+  if (!aKey) return status('Salva prima la chiave API Google Gemini nelle Impostazioni.');
   try {
     const p = collectForm();
     if (!p.name) return status('Serve almeno il nome del posto.');

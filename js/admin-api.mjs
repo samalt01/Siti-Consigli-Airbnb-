@@ -76,7 +76,7 @@ export async function translateItToEn(text) {
   return data.responseStatus === 200 ? out : '';
 }
 
-// --- Descrizioni con IA (Claude) ---
+// --- Descrizioni con IA (Google Gemini, piano gratuito) ---
 
 const CATEGORY_LABEL = {
   food: 'ristorante/locale dove mangiare', places: 'luogo da visitare',
@@ -98,37 +98,32 @@ export function buildDescriptionPrompt(place) {
   return parts.filter(l => l !== null).join('\n');
 }
 
-export async function generateDescriptions(place, anthropicKey) {
-  const res = await fetch('https://api.anthropic.com/v1/messages', {
+const GEMINI_MODEL = 'gemini-2.5-flash';
+
+export async function generateDescriptions(place, geminiKey) {
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${encodeURIComponent(geminiKey)}`;
+  const res = await fetch(url, {
     method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'x-api-key': anthropicKey,
-      'anthropic-version': '2023-06-01',
-      'anthropic-dangerous-direct-browser-access': 'true',
-    },
+    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      model: 'claude-opus-4-8',
-      max_tokens: 1024,
-      output_config: {
-        format: {
-          type: 'json_schema',
-          schema: {
-            type: 'object',
-            properties: {
-              descriptionIt: { type: 'string', description: 'Descrizione in italiano, 2-3 frasi' },
-              descriptionEn: { type: 'string', description: 'Stessa descrizione in inglese naturale (non tradotta parola per parola)' },
-            },
-            required: ['descriptionIt', 'descriptionEn'],
-            additionalProperties: false,
+      contents: [{ parts: [{ text: buildDescriptionPrompt(place) }] }],
+      generationConfig: {
+        temperature: 0.7,
+        responseMimeType: 'application/json',
+        responseSchema: {
+          type: 'OBJECT',
+          properties: {
+            descriptionIt: { type: 'STRING', description: 'Descrizione in italiano, 2-3 frasi' },
+            descriptionEn: { type: 'STRING', description: 'Stessa descrizione in inglese naturale, non tradotta parola per parola' },
           },
+          required: ['descriptionIt', 'descriptionEn'],
         },
       },
-      messages: [{ role: 'user', content: buildDescriptionPrompt(place) }],
     }),
   });
   const data = await jsonOrThrow(res);
-  if (data.stop_reason === 'refusal') throw new Error('Richiesta rifiutata dal modello');
-  const text = data.content?.find(b => b.type === 'text')?.text ?? '';
+  if (data.promptFeedback?.blockReason) throw new Error(`Richiesta bloccata: ${data.promptFeedback.blockReason}`);
+  const text = data.candidates?.[0]?.content?.parts?.[0]?.text;
+  if (!text) throw new Error('Risposta vuota dal modello');
   return JSON.parse(text);
 }
