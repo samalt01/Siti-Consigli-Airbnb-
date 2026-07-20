@@ -29,7 +29,14 @@
       "rating": 5,
       "descriptionIt": "Cena su un autentico trabocco, l'antica macchina da pesca sospesa sul mare. Menù fisso di pesce freschissimo e un'atmosfera che difficilmente dimenticherete. Prenotate con largo anticipo, soprattutto in estate.",
       "descriptionEn": "Dinner on an authentic trabocco, the traditional fishing platform suspended over the sea. Fixed menu of very fresh fish in a setting you won't easily forget. Book well in advance, especially in summer.",
-      "draft": false
+      "draft": false,
+      "photoUrls": [
+        "img/places/trabocco-punta-fornace.jpg",
+        "img/places/trabocco-punta-fornace-2.jpg",
+        "img/places/trabocco-punta-fornace-3.jpg",
+        "img/places/trabocco-punta-fornace-4.jpg",
+        "img/places/trabocco-punta-fornace-5.jpg"
+      ]
     },
     {
       "phone": "+39 0872 61599",
@@ -52,7 +59,14 @@
       "rating": null,
       "descriptionIt": "Cucina di mare a due passi dall'acqua, in un contesto rilassato. Una buona scelta per un pranzo o una cena senza formalità dopo una giornata di spiaggia.",
       "descriptionEn": "Seafood cooking just steps from the water, in a relaxed setting. A good choice for an easygoing lunch or dinner after a day at the beach.",
-      "draft": false
+      "draft": false,
+      "photoUrls": [
+        "img/places/giardino-mare.jpg",
+        "img/places/giardino-mare-2.jpg",
+        "img/places/giardino-mare-3.jpg",
+        "img/places/giardino-mare-4.jpg",
+        "img/places/giardino-mare-5.jpg"
+      ]
     },
     {
       "phone": "+39 0872 61632",
@@ -83,7 +97,14 @@
       "rating": null,
       "descriptionIt": "Il nostro consiglio per una cena più elegante: cucina di pesce curata e servizio attento a San Vito Chietino. Ideale per un'occasione speciale; meglio prenotare.",
       "descriptionEn": "Our pick for a more refined dinner: carefully prepared seafood and attentive service in San Vito Chietino. Ideal for a special occasion; booking recommended.",
-      "draft": false
+      "draft": false,
+      "photoUrls": [
+        "img/places/l-angolino.jpg",
+        "img/places/l-angolino-2.jpg",
+        "img/places/l-angolino-3.jpg",
+        "img/places/l-angolino-4.jpg",
+        "img/places/l-angolino-5.jpg"
+      ]
     },
     {
       "phone": "+39 0871 941461",
@@ -114,7 +135,14 @@
       "rating": null,
       "descriptionIt": "Nell'entroterra di Crecchio, cucina di terra abruzzese in un ambiente immerso nel verde. Una buona alternativa al mare, anche per famiglie.",
       "descriptionEn": "Inland in Crecchio, Abruzzo countryside cooking surrounded by greenery. A good alternative to the seaside, families welcome.",
-      "draft": false
+      "draft": false,
+      "photoUrls": [
+        "img/places/il-parco-dei-mulini.jpg",
+        "img/places/il-parco-dei-mulini-2.jpg",
+        "img/places/il-parco-dei-mulini-3.jpg",
+        "img/places/il-parco-dei-mulini-4.jpg",
+        "img/places/il-parco-dei-mulini-5.jpg"
+      ]
     },
     {
       "phone": "+39 347 794 9612",
@@ -145,7 +173,14 @@
       "rating": null,
       "descriptionIt": "A Vallevò, sulla Costa dei Trabocchi, è un indirizzo storico per il brodetto di pesce alla vastese. Se volete assaggiare il piatto simbolo di questa costa, partite da qui.",
       "descriptionEn": "In Vallevò, on the Trabocchi Coast, a long-standing spot famous for brodetto, the local fish stew. If you want to try the signature dish of this coastline, start here.",
-      "draft": false
+      "draft": false,
+      "photoUrls": [
+        "img/places/da-gino.jpg",
+        "img/places/da-gino-2.jpg",
+        "img/places/da-gino-3.jpg",
+        "img/places/da-gino-4.jpg",
+        "img/places/da-gino-5.jpg"
+      ]
     },
     {
       "phone": "+39 339 403 2162",
@@ -176,7 +211,14 @@
       "rating": null,
       "descriptionIt": "A Lanciano, il posto giusto per la tradizione abruzzese della carne: arrosticini e piatti a base di pecora fatti come si deve. Da provare almeno una volta durante il soggiorno.",
       "descriptionEn": "In Lanciano, the right place for Abruzzo's meat tradition: arrosticini (lamb skewers) and sheep-based dishes done properly. Worth trying at least once during your stay.",
-      "draft": false
+      "draft": false,
+      "photoUrls": [
+        "img/places/occhio-alla-pecora.jpg",
+        "img/places/occhio-alla-pecora-2.jpg",
+        "img/places/occhio-alla-pecora-3.jpg",
+        "img/places/occhio-alla-pecora-4.jpg",
+        "img/places/occhio-alla-pecora-5.jpg"
+      ]
     },
     {
       "phone": "+39 375 589 4187",
@@ -207,7 +249,14 @@
       "rating": null,
       "descriptionIt": "Ristorante sulla spiaggia: pesce fresco e piatti semplici da gustare direttamente in riva al mare. Perfetto per un pranzo dopo il bagno.",
       "descriptionEn": "Restaurant right on the beach: fresh fish and simple dishes to enjoy by the water. Perfect for lunch after a swim.",
-      "draft": false
+      "draft": false,
+      "photoUrls": [
+        "img/places/serafino-la-playa.jpg",
+        "img/places/serafino-la-playa-2.jpg",
+        "img/places/serafino-la-playa-3.jpg",
+        "img/places/serafino-la-playa-4.jpg",
+        "img/places/serafino-la-playa-5.jpg"
+      ]
     },
     {
       "phone": "+39 0872 634966",
@@ -238,7 +287,14 @@
       "rating": null,
       "descriptionIt": "Pizza in stile napoletano, impasto ben lievitato e ingredienti di qualità. Una valida opzione per una serata informale.",
       "descriptionEn": "Neapolitan-style pizza with well-leavened dough and quality ingredients. A solid option for a casual evening.",
-      "draft": false
+      "draft": false,
+      "photoUrls": [
+        "img/places/napule.jpg",
+        "img/places/napule-2.jpg",
+        "img/places/napule-3.jpg",
+        "img/places/napule-4.jpg",
+        "img/places/napule-5.jpg"
+      ]
     },
     {
       "phone": "+39 353 496 2081",
@@ -269,7 +325,14 @@
       "rating": null,
       "descriptionIt": "Per chi preferisce la carne: cotture alla brace e porzioni generose. Consigliato se dopo tanti giorni di pesce cercate un'alternativa.",
       "descriptionEn": "For meat lovers: grilled dishes and generous portions. Recommended if after days of seafood you're after something different.",
-      "draft": false
+      "draft": false,
+      "photoUrls": [
+        "img/places/ferro-e-fuoco.jpg",
+        "img/places/ferro-e-fuoco-2.jpg",
+        "img/places/ferro-e-fuoco-3.jpg",
+        "img/places/ferro-e-fuoco-4.jpg",
+        "img/places/ferro-e-fuoco-5.jpg"
+      ]
     },
     {
       "phone": "+39 347 534 0762",
@@ -300,7 +363,14 @@
       "rating": null,
       "descriptionIt": "Cucina di mare e pizza in un locale affacciato sulla costa. Buon rapporto qualità-prezzo e adatto anche alle famiglie.",
       "descriptionEn": "Seafood and pizza in a spot overlooking the coast. Good value for money and family-friendly too.",
-      "draft": false
+      "draft": false,
+      "photoUrls": [
+        "img/places/marechiaro.jpg",
+        "img/places/marechiaro-2.jpg",
+        "img/places/marechiaro-3.jpg",
+        "img/places/marechiaro-4.jpg",
+        "img/places/marechiaro-5.jpg"
+      ]
     },
     {
       "phone": "+39 0873 656615",
@@ -331,7 +401,14 @@
       "rating": null,
       "descriptionIt": "Gelato artigianale fatto con cura: la tappa giusta per una pausa dolce o una passeggiata serale.",
       "descriptionEn": "Carefully made artisan gelato: the right stop for a sweet break or an evening stroll.",
-      "draft": false
+      "draft": false,
+      "photoUrls": [
+        "img/places/gelateria-ai-tre-scalini.jpg",
+        "img/places/gelateria-ai-tre-scalini-2.jpg",
+        "img/places/gelateria-ai-tre-scalini-3.jpg",
+        "img/places/gelateria-ai-tre-scalini-4.jpg",
+        "img/places/gelateria-ai-tre-scalini-5.jpg"
+      ]
     },
     {
       "phone": "+39 0872 61097",
@@ -362,7 +439,14 @@
       "rating": null,
       "descriptionIt": "Pasticceria a San Vito Chietino, ideale per la colazione o per portare a casa qualche dolce della tradizione. Provate le specialità abruzzesi.",
       "descriptionEn": "Pastry shop in San Vito Chietino, ideal for breakfast or to take home some traditional sweets. Try the Abruzzo specialties.",
-      "draft": false
+      "draft": false,
+      "photoUrls": [
+        "img/places/pasticceria-rossana-iezzi.jpg",
+        "img/places/pasticceria-rossana-iezzi-2.jpg",
+        "img/places/pasticceria-rossana-iezzi-3.jpg",
+        "img/places/pasticceria-rossana-iezzi-4.jpg",
+        "img/places/pasticceria-rossana-iezzi-5.jpg"
+      ]
     },
     {
       "phone": "+39 0872 618069",
@@ -393,7 +477,14 @@
       "rating": null,
       "descriptionIt": "Un indirizzo che consigliamo volentieri per una cena informale nella zona. Ambiente accogliente e proposte del territorio.",
       "descriptionEn": "A place we gladly recommend for a casual dinner in the area. Welcoming atmosphere and local dishes.",
-      "draft": false
+      "draft": false,
+      "photoUrls": [
+        "img/places/fedipe.jpg",
+        "img/places/fedipe-2.jpg",
+        "img/places/fedipe-3.jpg",
+        "img/places/fedipe-4.jpg",
+        "img/places/fedipe-5.jpg"
+      ]
     },
     {
       "phone": "+39 334 388 1408",
@@ -424,7 +515,14 @@
       "rating": null,
       "descriptionIt": "Ristorante immerso in un giardino di aranci in contrada Ripari Bardella, a Ortona. Piacevole soprattutto nelle sere d'estate, quando si cena all'aperto.",
       "descriptionEn": "Restaurant set in an orange grove in the Ripari Bardella area of Ortona. Especially pleasant on summer evenings, when dinner is served outdoors.",
-      "draft": false
+      "draft": false,
+      "photoUrls": [
+        "img/places/il-giardino-degli-aranci.jpg",
+        "img/places/il-giardino-degli-aranci-2.jpg",
+        "img/places/il-giardino-degli-aranci-3.jpg",
+        "img/places/il-giardino-degli-aranci-4.jpg",
+        "img/places/il-giardino-degli-aranci-5.jpg"
+      ]
     },
     {
       "phone": "+39 379 279 2431",
@@ -455,7 +553,14 @@
       "rating": null,
       "descriptionIt": "Stabilimento attrezzato con ombrelloni, lettini e servizio bar: la scelta comoda per una giornata di mare senza pensieri.",
       "descriptionEn": "Fully equipped beach club with umbrellas, sunbeds and a bar: the easy choice for a carefree day by the sea.",
-      "draft": false
+      "draft": false,
+      "photoUrls": [
+        "img/places/lido-mare-me.jpg",
+        "img/places/lido-mare-me-2.jpg",
+        "img/places/lido-mare-me-3.jpg",
+        "img/places/lido-mare-me-4.jpg",
+        "img/places/lido-mare-me-5.jpg"
+      ]
     },
     {
       "phone": null,
@@ -486,7 +591,14 @@
       "rating": null,
       "descriptionIt": "Caletta naturale di ghiaia e acqua limpida, raggiungibile con una breve discesa a piedi. Portate scarpette da scoglio e qualcosa da bere: non ci sono servizi, ed è proprio questo il suo bello.",
       "descriptionEn": "Natural pebble cove with clear water, reached via a short walk down. Bring water shoes and something to drink: there are no facilities, and that's exactly its charm.",
-      "draft": false
+      "draft": false,
+      "photoUrls": [
+        "img/places/punta-acquabella.jpg",
+        "img/places/punta-acquabella-2.jpg",
+        "img/places/punta-acquabella-3.jpg",
+        "img/places/punta-acquabella-4.jpg",
+        "img/places/punta-acquabella-5.jpg"
+      ]
     },
     {
       "phone": null,
@@ -517,7 +629,14 @@
       "rating": null,
       "descriptionIt": "La baia che ispirò D'Annunzio, con il trabocco Turchino a incorniciare il panorama. Ciottoli, mare trasparente e poca folla: una delle spiagge più suggestive della zona, a pochi minuti dall'appartamento.",
       "descriptionEn": "The bay that inspired the poet D'Annunzio, framed by the Turchino trabocco. Pebbles, transparent water and few crowds: one of the most striking beaches in the area, minutes from the apartment.",
-      "draft": false
+      "draft": false,
+      "photoUrls": [
+        "img/places/calata-turchino.jpg",
+        "img/places/calata-turchino-2.jpg",
+        "img/places/calata-turchino-3.jpg",
+        "img/places/calata-turchino-4.jpg",
+        "img/places/calata-turchino-5.jpg"
+      ]
     },
     {
       "phone": "+39 345 337 8575",
@@ -548,7 +667,14 @@
       "rating": null,
       "descriptionIt": "Riserva naturale a Vasto con una delle spiagge più belle d'Abruzzo, Punta Penna. Vale la mezz'ora di viaggio: dune, sentieri panoramici e tramonti notevoli.",
       "descriptionEn": "Nature reserve in Vasto with one of Abruzzo's most beautiful beaches, Punta Penna. Worth the half-hour drive: dunes, scenic trails and remarkable sunsets.",
-      "draft": false
+      "draft": false,
+      "photoUrls": [
+        "img/places/punta-aderci.jpg",
+        "img/places/punta-aderci-2.jpg",
+        "img/places/punta-aderci-3.jpg",
+        "img/places/punta-aderci-4.jpg",
+        "img/places/punta-aderci-5.jpg"
+      ]
     },
     {
       "phone": "+39 085 906 7098",
@@ -579,7 +705,14 @@
       "rating": null,
       "descriptionIt": "Cala appartata a nord di Ortona: ghiaia chiara, fondale limpido e falesia alle spalle. Si raggiunge con una breve camminata, meglio arrivare presto in alta stagione.",
       "descriptionEn": "Secluded cove north of Ortona: light pebbles, clear water and a cliff backdrop. Reached via a short walk; best to arrive early in high season.",
-      "draft": false
+      "draft": false,
+      "photoUrls": [
+        "img/places/ripari-di-giobbe.jpg",
+        "img/places/ripari-di-giobbe-2.jpg",
+        "img/places/ripari-di-giobbe-3.jpg",
+        "img/places/ripari-di-giobbe-4.jpg",
+        "img/places/ripari-di-giobbe-5.jpg"
+      ]
     },
     {
       "phone": null,
@@ -610,7 +743,14 @@
       "rating": null,
       "descriptionIt": "Il famoso lago a forma di cuore, visibile dal sentiero che sale sopra la sponda. Abbinatelo a una passeggiata nel borgo di Scanno, tra i più belli d'Abruzzo. Gita di una giornata intera.",
       "descriptionEn": "The famous heart-shaped lake, best seen from the trail above the shore. Pair it with a walk through Scanno, one of Abruzzo's loveliest villages. Plan a full-day trip.",
-      "draft": false
+      "draft": false,
+      "photoUrls": [
+        "img/places/lago-di-scanno.jpg",
+        "img/places/lago-di-scanno-2.jpg",
+        "img/places/lago-di-scanno-3.jpg",
+        "img/places/lago-di-scanno-4.jpg",
+        "img/places/lago-di-scanno-5.jpg"
+      ]
     },
     {
       "phone": "+39 0862 930132",
@@ -641,7 +781,14 @@
       "rating": null,
       "descriptionIt": "Castello a quasi 1.500 metri di quota, set di film come Ladyhawke. La camminata dal borgo è semplice e il panorama sul Gran Sasso ripaga ampiamente. Consigliato il tramonto.",
       "descriptionEn": "A castle at nearly 1,500 metres, film set of Ladyhawke among others. The walk up from the village is easy and the Gran Sasso views are well worth it. Sunset is the best time.",
-      "draft": false
+      "draft": false,
+      "photoUrls": [
+        "img/places/rocca-calascio.jpg",
+        "img/places/rocca-calascio-2.jpg",
+        "img/places/rocca-calascio-3.jpg",
+        "img/places/rocca-calascio-4.jpg",
+        "img/places/rocca-calascio-5.jpg"
+      ]
     },
     {
       "phone": "+39 0872 714455",
@@ -672,7 +819,14 @@
       "rating": null,
       "descriptionIt": "Multisala a Lanciano: un'opzione comoda per una serata diversa o per una giornata di pioggia.",
       "descriptionEn": "Multiplex cinema in Lanciano: a handy option for a different kind of evening or a rainy day. Films are usually shown dubbed in Italian.",
-      "draft": false
+      "draft": false,
+      "photoUrls": [
+        "img/places/cinema-ciakcity.jpg",
+        "img/places/cinema-ciakcity-2.jpg",
+        "img/places/cinema-ciakcity-3.jpg",
+        "img/places/cinema-ciakcity-4.jpg",
+        "img/places/cinema-ciakcity-5.jpg"
+      ]
     },
     {
       "phone": "+39 0871 896143",
@@ -695,7 +849,14 @@
       "rating": null,
       "descriptionIt": "Rifugio-ristorante sulla strada per il Blockhaus, nel cuore della Majella. Cucina di montagna sostanziosa e aria fresca anche in piena estate: l'idea giusta per una giornata lontano dalla spiaggia.",
       "descriptionEn": "Mountain lodge and restaurant on the road to the Blockhaus, in the heart of the Majella massif. Hearty mountain cooking and cool air even at the height of summer: a good idea for a day away from the beach.",
-      "draft": false
+      "draft": false,
+      "photoUrls": [
+        "img/places/mammarosa-blockhaus.jpg",
+        "img/places/mammarosa-blockhaus-2.jpg",
+        "img/places/mammarosa-blockhaus-3.jpg",
+        "img/places/mammarosa-blockhaus-4.jpg",
+        "img/places/mammarosa-blockhaus-5.jpg"
+      ]
     },
     {
       "phone": "+39 349 847 4470",
@@ -726,7 +887,14 @@
       "rating": null,
       "descriptionIt": "L'eremo dove Pietro da Morrone ricevette la notizia dell'elezione a papa Celestino V, aggrappato alla parete del Morrone sopra Sulmona. Breve salita a piedi e vista ampia sulla valle Peligna.",
       "descriptionEn": "The hermitage where Pietro da Morrone learned he had been elected Pope Celestine V, clinging to the Morrone cliffside above Sulmona. A short uphill walk with sweeping views over the Peligna valley.",
-      "draft": false
+      "draft": false,
+      "photoUrls": [
+        "img/places/eremo-sant-onofrio.jpg",
+        "img/places/eremo-sant-onofrio-2.jpg",
+        "img/places/eremo-sant-onofrio-3.jpg",
+        "img/places/eremo-sant-onofrio-4.jpg",
+        "img/places/eremo-sant-onofrio-5.jpg"
+      ]
     },
     {
       "phone": "+39 0873 310130",
@@ -757,7 +925,14 @@
       "rating": null,
       "descriptionIt": "Parco acquatico con scivoli e piscine per tutte le età. Una giornata assicurata di divertimento per i bambini; nei weekend d'agosto conviene arrivare all'apertura.",
       "descriptionEn": "Water park with slides and pools for all ages. A guaranteed fun day for kids; on August weekends it's best to arrive at opening time.",
-      "draft": false
+      "draft": false,
+      "photoUrls": [
+        "img/places/aqualand-del-vasto.jpg",
+        "img/places/aqualand-del-vasto-2.jpg",
+        "img/places/aqualand-del-vasto-3.jpg",
+        "img/places/aqualand-del-vasto-4.jpg",
+        "img/places/aqualand-del-vasto-5.jpg"
+      ]
     },
     {
       "phone": "+39 329 066 4622",
@@ -788,7 +963,14 @@
       "rating": null,
       "descriptionIt": "Parco faunistico a Rocca San Giovanni con animali da tutto il mondo. Percorso adatto anche ai più piccoli, mettete in conto mezza giornata.",
       "descriptionEn": "Wildlife park in Rocca San Giovanni with animals from around the world. The route suits even the youngest visitors; allow half a day.",
-      "draft": false
+      "draft": false,
+      "photoUrls": [
+        "img/places/zoo-d-abruzzo.jpg",
+        "img/places/zoo-d-abruzzo-2.jpg",
+        "img/places/zoo-d-abruzzo-3.jpg",
+        "img/places/zoo-d-abruzzo-4.jpg",
+        "img/places/zoo-d-abruzzo-5.jpg"
+      ]
     },
     {
       "phone": "+39 0871 335544",
@@ -819,7 +1001,14 @@
       "rating": null,
       "descriptionIt": "Percorsi sospesi tra gli alberi con livelli di difficoltà per ogni età, in un bosco fresco ai piedi della Majella. Ottima idea per una giornata attiva in famiglia.",
       "descriptionEn": "Treetop adventure courses with difficulty levels for every age, in a cool forest at the foot of the Majella. A great pick for an active family day.",
-      "draft": false
+      "draft": false,
+      "photoUrls": [
+        "img/places/parco-avventura-piana-delle-mele.jpg",
+        "img/places/parco-avventura-piana-delle-mele-2.jpg",
+        "img/places/parco-avventura-piana-delle-mele-3.jpg",
+        "img/places/parco-avventura-piana-delle-mele-4.jpg",
+        "img/places/parco-avventura-piana-delle-mele-5.jpg"
+      ]
     },
     {
       "phone": "+39 0861 7791",
@@ -850,7 +1039,14 @@
       "rating": null,
       "descriptionIt": "Parco acquatico con piscine e scivoli, alternativa più tranquilla per una giornata d'acqua con i bambini.",
       "descriptionEn": "Water park with pools and slides, a quieter alternative for a water-filled day with the kids.",
-      "draft": false
+      "draft": false,
+      "photoUrls": [
+        "img/places/onda-blu.jpg",
+        "img/places/onda-blu-2.jpg",
+        "img/places/onda-blu-3.jpg",
+        "img/places/onda-blu-4.jpg",
+        "img/places/onda-blu-5.jpg"
+      ]
     },
     {
       "phone": null,
@@ -881,7 +1077,14 @@
       "rating": null,
       "descriptionIt": "Centro commerciale a Lanciano con negozi, supermercato e servizi: pratico per acquisti di ogni genere senza allontanarsi troppo.",
       "descriptionEn": "Shopping centre in Lanciano with shops, a supermarket and services: practical for all kinds of purchases without going too far.",
-      "draft": false
+      "draft": false,
+      "photoUrls": [
+        "img/places/polycenter.jpg",
+        "img/places/polycenter-2.jpg",
+        "img/places/polycenter-3.jpg",
+        "img/places/polycenter-4.jpg",
+        "img/places/polycenter-5.jpg"
+      ]
     },
     {
       "phone": null,
@@ -930,7 +1133,14 @@
       "rating": null,
       "descriptionIt": "Il centro commerciale di Ortona, in contrada Santa Liberata: supermercato e negozi a pochi minuti d'auto dall'appartamento.",
       "descriptionEn": "Ortona's shopping centre, in the Santa Liberata district: supermarket and shops just a few minutes' drive from the apartment.",
-      "draft": false
+      "draft": false,
+      "photoUrls": [
+        "img/places/ortona-center.jpg",
+        "img/places/ortona-center-2.jpg",
+        "img/places/ortona-center-3.jpg",
+        "img/places/ortona-center-4.jpg",
+        "img/places/ortona-center-5.jpg"
+      ]
     },
     {
       "phone": "+39 0871 540010",
@@ -961,7 +1171,14 @@
       "rating": null,
       "descriptionIt": "Il grande centro commerciale di Chieti Scalo: oltre cento negozi, ristorazione e cinema. La meta giusta per una giornata dedicata allo shopping.",
       "descriptionEn": "The large shopping mall in Chieti Scalo: over a hundred stores, food court and cinema. The right destination for a full shopping day.",
-      "draft": false
+      "draft": false,
+      "photoUrls": [
+        "img/places/megalo.jpg",
+        "img/places/megalo-2.jpg",
+        "img/places/megalo-3.jpg",
+        "img/places/megalo-4.jpg",
+        "img/places/megalo-5.jpg"
+      ]
     },
     {
       "phone": "+39 085 950302",
@@ -992,7 +1209,14 @@
       "rating": null,
       "descriptionIt": "Outlet a cielo aperto con marchi noti a prezzi scontati. A circa un'ora d'auto: da abbinare magari a una visita al borgo di Città Sant'Angelo.",
       "descriptionEn": "Open-air outlet village with well-known brands at discounted prices. About an hour's drive away: worth pairing with a visit to the old town of Città Sant'Angelo.",
-      "draft": false
+      "draft": false,
+      "photoUrls": [
+        "img/places/citta-sant-angelo-village.jpg",
+        "img/places/citta-sant-angelo-village-2.jpg",
+        "img/places/citta-sant-angelo-village-3.jpg",
+        "img/places/citta-sant-angelo-village-4.jpg",
+        "img/places/citta-sant-angelo-village-5.jpg"
+      ]
     }
   ]
 }
