@@ -1,5 +1,6 @@
 import { visiblePlaces, formatDistance, starsHtml, descriptionFor, mapsUrl, waUrl, telUrl, photosOf } from './core.mjs';
 import { t, getLang, setLang } from './i18n.mjs';
+import { fetchWeather, weatherIcon, weatherLabel } from './weather.mjs';
 
 const CATEGORIES = [
   { id: 'food', emoji: '🍕' }, { id: 'places', emoji: '📍' },
@@ -8,7 +9,7 @@ const CATEGORIES = [
 const state = {
   lang: getLang(), category: 'food', tag: null,
   preview: new URLSearchParams(location.search).has('preview'),
-  config: null, places: [],
+  config: null, places: [], weather: null,
 };
 const $ = id => document.getElementById(id);
 
@@ -30,6 +31,24 @@ function renderHeader() {
   const wa = $('wa-footer');
   wa.href = waUrl(state.config.whatsapp, state.lang);
   wa.querySelector('span').textContent = t('contactHost', state.lang);
+  renderWeatherChip();
+}
+
+function renderWeatherChip() {
+  const el = $('weather');
+  if (!state.weather) { el.hidden = true; return; }
+  const { temp, code } = state.weather;
+  el.textContent = `${weatherIcon(code)} ${temp}° · ${weatherLabel(code, state.lang)}`;
+  const q = encodeURIComponent(`meteo ${state.config.area ?? ''}`.trim());
+  el.href = `https://www.google.com/search?q=${q}`;
+  el.hidden = false;
+}
+
+async function loadWeather() {
+  try {
+    state.weather = await fetchWeather(state.config.home);
+    renderWeatherChip();
+  } catch { /* meteo non disponibile: chip resta nascosto */ }
 }
 
 function renderTabs() {
@@ -162,5 +181,5 @@ function bindEvents() {
   });
 }
 
-loadData().then(() => { bindEvents(); renderAll(); })
+loadData().then(() => { bindEvents(); renderAll(); loadWeather(); })
   .catch(() => { $('cards').innerHTML = `<p class="msg">${t('errorLoad', getLang())}</p>`; });

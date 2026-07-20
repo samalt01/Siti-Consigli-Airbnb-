@@ -69,6 +69,14 @@ button, .card, .fab, .tab, .chip { touch-action: manipulation; cursor: pointer; 
   -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
 }
 .tagline { margin: 1px 0 0; font-size: .74rem; color: var(--muted); font-weight: 500; }
+.weather-chip { display: inline-flex; align-items: center; gap: 4px; margin-top: 7px;
+  padding: 4px 11px; border-radius: 999px; font-size: .76rem; font-weight: 600;
+  color: var(--sea-deep); text-decoration: none;
+  background: var(--glass); border: 1px solid var(--glass-border);
+  -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
+  transition: transform .25s var(--spring); }
+.weather-chip:active { transform: scale(.94); }
+.weather-chip[hidden] { display: none; }
 
 .lang-switch {
   display: flex; gap: 2px; padding: 3px;
