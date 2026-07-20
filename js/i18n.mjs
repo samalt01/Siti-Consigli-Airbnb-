@@ -9,6 +9,9 @@ export const STRINGS = {
     errorLoad: 'Impossibile caricare i consigli. Riprova più tardi.',
     emptyCategory: 'Nessun posto in questa sezione, per ora.',
     tagline: 'I posti che consiglio ai miei ospiti',
+    openNow: 'Aperto', closedNow: 'Chiuso',
+    favorites: 'Preferiti', noFavorites: 'Nessun preferito qui. Tocca il cuore su un posto per salvarlo.',
+    mapView: 'Mappa', listView: 'Lista', details: 'Dettagli', apartment: 'Appartamento',
   },
   en: {
     food: 'Food', places: 'Places to go', kids: 'For the little ones', shopping: 'Shopping',
@@ -20,6 +23,9 @@ export const STRINGS = {
     errorLoad: 'Could not load the recommendations. Please try again later.',
     emptyCategory: 'No places in this section yet.',
     tagline: 'The places I recommend to my guests',
+    openNow: 'Open', closedNow: 'Closed',
+    favorites: 'Favorites', noFavorites: 'No favorites here yet. Tap the heart on a place to save it.',
+    mapView: 'Map', listView: 'List', details: 'Details', apartment: 'Apartment',
   },
 };
 

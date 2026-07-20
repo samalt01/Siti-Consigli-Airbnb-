@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { visiblePlaces, formatDistance, starsHtml, descriptionFor, mapsUrl, waUrl, telUrl, photosOf } from '../js/core.mjs';
+import { visiblePlaces, formatDistance, starsHtml, descriptionFor, mapsUrl, waUrl, telUrl, photosOf, isOpenNow } from '../js/core.mjs';
 
 const P = (over) => ({ id: 'x', placeId: 'PID', category: 'food', tag: null, name: 'X',
   rating: null, descriptionIt: 'it', descriptionEn: 'en', draft: false,
@@ -79,4 +79,19 @@ test('photosOf: array photoUrls, fallback photoUrl singola, vuoto', () => {
   assert.deepEqual(photosOf(P({ photoUrl: 'solo.jpg' })), ['solo.jpg']);
   assert.deepEqual(photosOf(P({})), []);
   assert.deepEqual(photosOf(P({ photoUrls: [] , photoUrl: 'x.jpg' })), ['x.jpg']);
+});
+
+test('isOpenNow: intervalli, chiuso, oltre mezzanotte, senza orari', () => {
+  const p = { hours: { 0: 'lunedì: 13:00–14:00, 20:00–21:30', 6: 'domenica: Chiuso', 4: 'venerdì: 20:00–01:00' } };
+  // lunedì 2026-01-05
+  assert.equal(isOpenNow(p, new Date('2026-01-05T13:30:00')), true);
+  assert.equal(isOpenNow(p, new Date('2026-01-05T15:00:00')), false);
+  assert.equal(isOpenNow(p, new Date('2026-01-05T20:30:00')), true);
+  // domenica 2026-01-11: chiuso
+  assert.equal(isOpenNow(p, new Date('2026-01-11T12:00:00')), false);
+  // venerdì 2026-01-09: oltre mezzanotte
+  assert.equal(isOpenNow(p, new Date('2026-01-09T00:30:00')), true);
+  assert.equal(isOpenNow(p, new Date('2026-01-09T19:00:00')), false);
+  // nessun orario
+  assert.equal(isOpenNow({ hours: null }, new Date('2026-01-05T13:30:00')), null);
 });

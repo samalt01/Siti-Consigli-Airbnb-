@@ -9,7 +9,9 @@
   <meta http-equiv="Expires" content="0">
   <!-- v: incrementare a ogni modifica di CSS/JS per aggiornamento immediato -->
   <title>La Guida di Samuele</title>
-  <link rel="stylesheet" href="css/style.css?v=2">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="css/style.css?v=3">
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </head>
 <body>
   <header class="header">
@@ -26,9 +28,13 @@
 
   <nav id="tabs" class="tabs" role="tablist"></nav>
   <div id="subfilters" class="subfilters" hidden></div>
-  <div id="sort" class="sort" role="group" aria-label="Ordina / Sort"></div>
+  <div class="toolbar">
+    <div id="sort" class="sort" role="group" aria-label="Ordina / Sort"></div>
+    <button id="view-toggle" class="view-toggle" type="button"></button>
+  </div>
 
   <main id="cards" class="cards" aria-live="polite"></main>
+  <div id="map" class="map" hidden></div>
 
   <footer class="footer">
     <a id="wa-footer" class="fab" href="#" target="_blank" rel="noopener">💬<span></span></a>
@@ -36,6 +42,6 @@
 
   <section id="detail" class="detail" hidden></section>
 
-  <script type="module" src="js/app.js?v=2"></script>
+  <script type="module" src="js/app.js?v=3"></script>
 </body>
 </html>

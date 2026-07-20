@@ -64,3 +64,27 @@ export function photosOf(place) {
   if (Array.isArray(place.photoUrls) && place.photoUrls.length) return place.photoUrls;
   return place.photoUrl ? [place.photoUrl] : [];
 }
+
+const DAY_PREFIX = /^\s*(luned[iì]|marted[iì]|mercoled[iì]|gioved[iì]|venerd[iì]|sabato|domenica)\s*:?\s*/i;
+
+// true = aperto, false = chiuso, null = orari non disponibili/non interpretabili.
+export function isOpenNow(place, now = new Date()) {
+  if (!place.hours) return null;
+  const idx = (now.getDay() + 6) % 7; // hours[0] = lunedì
+  const raw = place.hours[idx] ?? place.hours[String(idx)];
+  if (!raw) return null;
+  const body = raw.replace(DAY_PREFIX, '').trim();
+  if (/chiuso/i.test(body)) return false;
+  if (/24\s*ore|aperto\s*24|24\s*\/\s*24/i.test(body)) return true;
+  const cur = now.getHours() * 60 + now.getMinutes();
+  const re = /(\d{1,2}):(\d{2})\s*[–\-—]\s*(\d{1,2}):(\d{2})/g;
+  let m, found = false;
+  while ((m = re.exec(body))) {
+    found = true;
+    const start = (+m[1]) * 60 + (+m[2]);
+    const end = (+m[3]) * 60 + (+m[4]);
+    const open = end > start ? (cur >= start && cur < end) : (cur >= start || cur < end);
+    if (open) return true;
+  }
+  return found ? false : null;
+}
