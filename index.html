@@ -4,8 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0C4A6E">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <!-- v: incrementare a ogni modifica di CSS/JS per aggiornamento immediato -->
   <title>La Guida di Samuele</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=2">
 </head>
 <body>
   <header class="header">
@@ -22,6 +26,7 @@
 
   <nav id="tabs" class="tabs" role="tablist"></nav>
   <div id="subfilters" class="subfilters" hidden></div>
+  <div id="sort" class="sort" role="group" aria-label="Ordina / Sort"></div>
 
   <main id="cards" class="cards" aria-live="polite"></main>
 
@@ -31,6 +36,6 @@
 
   <section id="detail" class="detail" hidden></section>
 
-  <script type="module" src="js/app.js"></script>
+  <script type="module" src="js/app.js?v=2"></script>
 </body>
 </html>

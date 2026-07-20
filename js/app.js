@@ -1,13 +1,17 @@
-import { visiblePlaces, formatDistance, starsHtml, descriptionFor, mapsUrl, waUrl, telUrl, photosOf } from './core.mjs';
-import { t, getLang, setLang } from './i18n.mjs';
-import { fetchWeather, weatherIcon, weatherLabel } from './weather.mjs';
+import { visiblePlaces, formatDistance, starsHtml, descriptionFor, mapsUrl, waUrl, telUrl, photosOf } from './core.mjs?v=2';
+import { t, getLang, setLang } from './i18n.mjs?v=2';
+import { fetchWeather, weatherIcon, weatherLabel } from './weather.mjs?v=2';
 
 const CATEGORIES = [
   { id: 'food', emoji: '🍕' }, { id: 'places', emoji: '📍' },
   { id: 'kids', emoji: '👶' }, { id: 'shopping', emoji: '🛍️' },
 ];
+const SORTS = [
+  { id: 'rating', icon: '⭐', label: 'sortRating' },
+  { id: 'distance', icon: '📍', label: 'sortDistance' },
+];
 const state = {
-  lang: getLang(), category: 'food', tag: null,
+  lang: getLang(), category: 'food', tag: null, sort: 'rating',
   preview: new URLSearchParams(location.search).has('preview'),
   config: null, places: [], weather: null,
 };
@@ -66,9 +70,15 @@ function renderTabs() {
   } else { sub.hidden = true; sub.innerHTML = ''; }
 }
 
+function renderSort() {
+  $('sort').innerHTML = `<span class="sort-label">${t('sortBy', state.lang)}</span>` +
+    SORTS.map(s =>
+      `<button class="chip ${s.id === state.sort ? 'active' : ''}" data-sort="${s.id}">${s.icon} ${t(s.label, state.lang)}</button>`).join('');
+}
+
 function renderCards() {
   const list = visiblePlaces(state.places,
-    { category: state.category, tag: state.tag, includeDrafts: state.preview });
+    { category: state.category, tag: state.tag, includeDrafts: state.preview, sort: state.sort });
   $('cards').innerHTML = list.length ? list.map((p, i) => `
     <article class="card" data-id="${p.id}" style="--i:${i}">
       ${p.photoUrl ? `<img src="${p.photoUrl}" alt="" loading="lazy">` : `<div class="noimg">📷</div>`}
@@ -159,7 +169,7 @@ function renderDetail(place) {
   d.onclick = e => { if (e.target === d) closeDetail(); };
 }
 
-function renderAll() { renderHeader(); renderTabs(); renderCards(); }
+function renderAll() { renderHeader(); renderTabs(); renderSort(); renderCards(); }
 
 function bindEvents() {
   $('tabs').addEventListener('click', e => {
@@ -169,6 +179,10 @@ function bindEvents() {
   $('subfilters').addEventListener('click', e => {
     const b = e.target.closest('[data-tag]');
     if (b) { state.tag = b.dataset.tag || null; renderAll(); }
+  });
+  $('sort').addEventListener('click', e => {
+    const b = e.target.closest('[data-sort]');
+    if (b) { state.sort = b.dataset.sort; renderSort(); renderCards(); }
   });
   $('cards').addEventListener('click', e => {
     const card = e.target.closest('[data-id]');

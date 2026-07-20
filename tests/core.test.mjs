@@ -18,6 +18,18 @@ test('visiblePlaces: filtra draft e categoria, ordina rating desc poi km asc, nu
   assert.deepEqual(visiblePlaces(places, { category: 'food' }).map(p => p.id), ['b', 'c', 'a', 'd']);
 });
 
+test('visiblePlaces: ordinamento per distanza (km asc, null in coda)', () => {
+  const places = [
+    P({ id: 'a', rating: 4, distance: { km: 9, minutes: 12 } }),
+    P({ id: 'b', rating: 4.5 }),                                   // distanza null → in coda
+    P({ id: 'c', rating: 4, distance: { km: 2, minutes: 4 } }),
+    P({ id: 'd', rating: 5, distance: { km: 5, minutes: 8 } }),
+  ];
+  assert.deepEqual(
+    visiblePlaces(places, { category: 'food', sort: 'distance' }).map(p => p.id),
+    ['c', 'd', 'a', 'b']);
+});
+
 test('visiblePlaces: includeDrafts e filtro tag', () => {
   const places = [
     P({ id: 'a', category: 'places', tag: 'beach' }),

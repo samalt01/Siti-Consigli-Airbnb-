@@ -114,6 +114,8 @@ button, .card, .fab, .tab, .chip { touch-action: manipulation; cursor: pointer; 
 
 /* ---------- chip filtri ---------- */
 .subfilters { display: flex; gap: 8px; padding: 8px 14px 2px; }
+.sort { display: flex; gap: 8px; padding: 8px 14px 2px; align-items: center; flex-wrap: wrap; }
+.sort-label { font-size: .76rem; font-weight: 600; color: var(--muted); }
 .chip {
   border: 1px solid var(--glass-border); background: var(--glass);
   -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);

@@ -1,14 +1,17 @@
 // Funzioni pure condivise da sito pubblico e admin. Nessuna dipendenza dal DOM.
 
-export function visiblePlaces(places, { category, tag = null, includeDrafts = false }) {
+export function visiblePlaces(places, { category, tag = null, includeDrafts = false, sort = 'rating' }) {
   const key = (v, dir = 1) => (v === null || v === undefined ? Infinity : dir * v);
+  const byRating = (a, b) => key(a.rating, -1) - key(b.rating, -1);
+  const byKm = (a, b) => key(a.distance?.km) - key(b.distance?.km);
+  const cmp = sort === 'distance'
+    ? (a, b) => byKm(a, b) || byRating(a, b)
+    : (a, b) => byRating(a, b) || byKm(a, b);
   return places
     .filter(p => p.category === category)
     .filter(p => (tag ? p.tag === tag : true))
     .filter(p => includeDrafts || !p.draft)
-    .sort((a, b) =>
-      key(a.rating, -1) - key(b.rating, -1) ||
-      key(a.distance?.km) - key(b.distance?.km));
+    .sort(cmp);
 }
 
 export function formatDistance(distance, lang) {

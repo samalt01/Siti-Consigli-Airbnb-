@@ -2,6 +2,7 @@ export const STRINGS = {
   it: {
     food: 'Cibo', places: 'Places to go', kids: 'Per i più piccoli', shopping: 'Shopping',
     all: 'Tutti', beaches: 'Spiagge', experiences: 'Esperienze',
+    sortBy: 'Ordina:', sortRating: 'Miglior voto', sortDistance: 'Più vicini',
     call: 'Chiama', directions: 'Indicazioni', contactHost: 'Contatta il tuo host',
     back: 'Indietro', hours: 'Orari', address: 'Indirizzo',
     today: 'Oggi', checkOnGoogle: 'Verifica gli orari su Google',
@@ -12,6 +13,7 @@ export const STRINGS = {
   en: {
     food: 'Food', places: 'Places to go', kids: 'For the little ones', shopping: 'Shopping',
     all: 'All', beaches: 'Beaches', experiences: 'Experiences',
+    sortBy: 'Sort:', sortRating: 'Top rated', sortDistance: 'Nearest',
     call: 'Call', directions: 'Directions', contactHost: 'Contact your host',
     back: 'Back', hours: 'Hours', address: 'Address',
     today: 'Today', checkOnGoogle: 'Check hours on Google',
