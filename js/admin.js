@@ -262,3 +262,26 @@ $('more-photos').onclick = async () => {
   refreshList();
   status(`Foto aggiornate per ${done}/${targets.length} posti${errors ? ` — ${errors} errori (vedi console)` : ''}. Ricorda di pubblicare.`);
 };
+
+// --- Batch: genera descrizioni IA per tutti i posti (anche quelli esistenti) ---
+$('ai-desc-all').onclick = async () => {
+  const aKey = getGeminiKey();
+  if (!aKey) return status('Salva prima la chiave API Google Gemini nelle Impostazioni.');
+  if (!state.dirHandle) return status('Scegli la cartella del progetto prima.');
+  if (!confirm(`Genero le descrizioni IA (IT + EN) per tutti i ${state.places.length} posti?\nLe descrizioni attuali verranno sostituite. Ci vogliono alcuni minuti.`)) return;
+  let done = 0, errors = 0;
+  for (const p of state.places) {
+    try {
+      status(`✨ (${done + errors + 1}/${state.places.length}) ${p.name}…`);
+      const d = await generateDescriptions(p, aKey);
+      p.descriptionIt = d.descriptionIt;
+      p.descriptionEn = d.descriptionEn;
+      p.draft = !(p.descriptionIt && p.coords);
+      await persist();
+      done++;
+      await new Promise(r => setTimeout(r, 4500)); // rispetta i limiti del piano gratuito (~15/min)
+    } catch (e) { errors++; console.error(p.id, e); }
+  }
+  refreshList();
+  status(`Descrizioni generate per ${done}/${state.places.length}${errors ? ` — ${errors} errori (vedi console)` : ''}. Ricorda di pubblicare.`);
+};
