@@ -42,5 +42,5 @@ test('buildDescriptionPrompt include nome, tipo e tono', () => {
   assert.match(prompt, /Da Gino/);
   assert.match(prompt, /ristorante/);
   assert.match(prompt, /8.1 km/);
-  assert.match(prompt, /propositivo ma non eccessivamente entusiasta/);
+  assert.match(prompt, /rassicurante.*non eccessivamente entusiasta/);
 });

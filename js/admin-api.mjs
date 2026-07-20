@@ -93,7 +93,7 @@ export function buildDescriptionPrompt(place) {
     place.address ? `Indirizzo: ${place.address}` : null,
     place.distance ? `Distanza dall'appartamento: ${place.distance.km} km (${place.distance.minutes} min in auto)` : null,
     ``,
-    `Tono: propositivo ma non eccessivamente entusiasta, da consiglio personale di un host che conosce la zona. 2-3 frasi, includi un suggerimento pratico se sensato (prenotare, orari, cosa portare). Niente superlativi gonfiati, niente emoji.`,
+    `Tono: rassicurante e caloroso, da host che accoglie i suoi ospiti — non eccessivamente entusiasta ma genuinamente contento di consigliare il posto. 2-3 frasi, includi un suggerimento pratico se sensato (prenotare, orari, cosa portare). Niente superlativi gonfiati, niente emoji.`,
   ];
   return parts.filter(l => l !== null).join('\n');
 }
